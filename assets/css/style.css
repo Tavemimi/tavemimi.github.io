@@ -3,16 +3,18 @@
    ============================================================ */
 
 :root {
-  --bg: #0f0d1a;
-  --bg-2: #171429;
-  --card: #1e1b31;
-  --card-2: #272343;
-  --texto: #f3f0ff;
-  --texto-suave: #b7b0d4;
-  --destaque: #ff5d8f;
-  --destaque-2: #7c5cff;
+  /* Paleta vinho: fundo profundo acobreado-vinho, com brilho */
+  --bg: #1a0a12;         /* vinho bem escuro (base) */
+  --bg-2: #2a0e1b;       /* vinho um tom acima */
+  --card: #2e1320;       /* cartões em vinho */
+  --card-2: #3d1a2b;     /* vinho mais claro pros destaques */
+  --texto: #fdeef2;      /* branco levemente rosado */
+  --texto-suave: #d6a9ba; /* rosé suave pro texto secundário */
+  --destaque: #ff6b9d;   /* rosa vivo */
+  --destaque-2: #c0304f; /* vinho/carmim vibrante */
+  --vinho-brilho: #e84a6f; /* brilho quente pro fundo */
   --estrela: #ffd166;
-  --sombra: 0 12px 30px rgba(0, 0, 0, 0.45);
+  --sombra: 0 12px 30px rgba(40, 0, 15, 0.55);
   --raio: 16px;
 }
 
@@ -23,10 +25,7 @@ html { scroll-behavior: smooth; }
 body {
   font-family: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
   color: var(--texto);
-  background:
-    radial-gradient(1200px 600px at 10% -10%, rgba(124, 92, 255, 0.25), transparent 60%),
-    radial-gradient(1000px 500px at 110% 10%, rgba(255, 93, 143, 0.2), transparent 55%),
-    var(--bg);
+  background: var(--bg); /* o fundo vinho animado completo está na seção de animações */
   min-height: 100vh;
   line-height: 1.5;
 }
@@ -588,21 +587,34 @@ body {
    ✨ ANIMAÇÕES DE ROMANCE ✨
    ============================================================ */
 
-/* ---- Fundo animado: gradiente que se move devagar ---- */
+/* ---- Fundo animado: vinho profundo com brilho low-fade que se move devagar ---- */
 body {
   background:
-    radial-gradient(1200px 600px at 10% -10%, rgba(124, 92, 255, 0.28), transparent 60%),
-    radial-gradient(1000px 500px at 110% 10%, rgba(255, 93, 143, 0.24), transparent 55%),
-    radial-gradient(900px 500px at 50% 120%, rgba(255, 110, 180, 0.18), transparent 60%),
-    var(--bg);
+    radial-gradient(1100px 600px at 15% -10%, rgba(192, 48, 79, 0.35), transparent 60%),
+    radial-gradient(1000px 520px at 110% 5%, rgba(232, 74, 111, 0.28), transparent 55%),
+    radial-gradient(900px 500px at 50% 120%, rgba(255, 107, 157, 0.18), transparent 62%),
+    linear-gradient(160deg, #220a14 0%, var(--bg) 55%, #140609 100%);
   background-size: 180% 180%, 180% 180%, 180% 180%, auto;
-  animation: fundoVivo 18s ease-in-out infinite;
+  animation: fundoVivo 20s ease-in-out infinite;
 }
 
 @keyframes fundoVivo {
   0%   { background-position: 0% 0%, 100% 0%, 50% 100%, 0 0; }
   50%  { background-position: 100% 50%, 0% 50%, 50% 0%, 0 0; }
   100% { background-position: 0% 0%, 100% 0%, 50% 100%, 0 0; }
+}
+
+/* Brilho/verniz sutil por cima do vinho (aspecto polido e luxuoso) */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    radial-gradient(60% 40% at 50% 0%, rgba(255, 150, 180, 0.10), transparent 70%),
+    linear-gradient(180deg, rgba(255, 220, 230, 0.05), transparent 35%);
+  mix-blend-mode: screen;
 }
 
 /* ---- Corações flutuando pela tela ---- */
