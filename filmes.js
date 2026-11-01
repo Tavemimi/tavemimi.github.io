@@ -218,7 +218,7 @@ const FILMES = [
     titulo: "A Nova Onda do Kronk",
     tituloBusca: "Kronk's New Groove",
     ano: 2005,
-    posterUrl: "https://m.media-amazon.com/images/M/MV5BMTQ5NjQyOTU2MF5BMl5BanBnXkFtZTcwOTU0NjMzMQ@@._V1_SX300.jpg",
+    posterUrl: "https://image.tmdb.org/t/p/w500/7g5Y8bLhThN91pqhJs7KVylwIXi.jpg",
     data: "2025-04-27",
     nota: 4,
     sinopse: "O desastrado Kronk tenta provar ao pai que fez algo da vida, aprontando muita confusão pelo caminho.",
@@ -372,9 +372,9 @@ const FILMES = [
 
   {
     titulo: "Carrinhos",
-    tituloBusca: "The Little Cars",
+    tituloBusca: "The Little Cars in the Great Race",
     ano: 2006,
-    posterUrl: "https://m.media-amazon.com/images/M/MV5BOWViNmQ4ZTMtNTdjNC00YzU0LTgzZmYtY2Q4MDBlNWZmODUwXkEyXkFqcGdeQXVyNTM3MDMyMDQ@._V1_SX300.jpg",
+    posterUrl: "https://image.tmdb.org/t/p/w500/9bA11rxTYfwU3ht7rNPJTpocyCr.jpg",
     data: "2025-07-13",
     nota: 3,
     sinopse: "Animação da Video Brinquedo sobre carrinhos de corrida (não confundir com 'Carros', da Disney/Pixar).",
@@ -386,8 +386,8 @@ const FILMES = [
   {
     titulo: "A Casa dos Vilões do Mickey Mouse",
     tituloBusca: "Mickey's House of Villains",
-    ano: 2001,
-    posterUrl: "https://m.media-amazon.com/images/M/MV5BZDQ2MDUyNWItMWFjNy00MzlhLWExZTktOTc4NmZiNmU0NjBlXkEyXkFqcGdeQXVyNjk1Njg5NTA@._V1_SX300.jpg",
+    ano: 2002,
+    posterUrl: "https://image.tmdb.org/t/p/w500/oV6q3SbgVjRD5Dhzo3lYx7viqUQ.jpg",
     data: "2025-07-20",
     nota: 4,
     sinopse: "No Dia das Bruxas, os vilões da Disney tomam a casa do Mickey para uma noite cheia de sustos e diversão.",
