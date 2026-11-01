@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nosso Acervo de Filmes 🎬</title>
+  <meta name="description" content="Um álbum de lembranças dos filmes que já assistimos juntos." />
+
+  <!-- Favicon: o iconezinho que aparece na aba do navegador -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <!-- Fallback em emoji para navegadores que não carregam o SVG -->
+  <link rel="alternate icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ctext y='14' font-size='14'%3E%F0%9F%8E%AC%3C/text%3E%3C/svg%3E" />
+  <!-- Ícone para quando salvam o site na tela inicial do celular -->
+  <link rel="apple-touch-icon" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="nav">
+    <span class="marca">🎬❤️ Nosso Cantinho</span>
+    <a href="index.html">Início</a>
+    <a href="filmes.html" class="ativo">Filmes</a>
+    <a href="poemas.html">Poemas</a>
+    <a href="fotos.html">Fotos</a>
+  </nav>
+
+  <header class="topo">
+    <h1>Nosso Acervo de Filmes <span aria-hidden="true">🎬❤️</span></h1>
+    <p class="subtitulo">Um álbum das lembranças que a gente viu juntos.</p>
+
+    <div class="controles">
+      <input
+        type="search"
+        id="busca"
+        class="busca"
+        placeholder="Buscar por título ou piada..."
+        aria-label="Buscar filme"
+      />
+      <select id="ordenar" class="ordenar" aria-label="Ordenar filmes">
+        <option value="data-desc">Mais recentes primeiro</option>
+        <option value="data-asc">Mais antigos primeiro</option>
+        <option value="nota-desc">Melhor avaliados</option>
+        <option value="titulo-asc">Título (A-Z)</option>
+      </select>
+    </div>
+
+    <p class="stats" id="stats"></p>
+  </header>
+
+  <main>
+    <section class="grade" id="grade" aria-live="polite"></section>
+    <p class="vazio" id="vazio" hidden>Nenhum filme encontrado por aqui. 🍿</p>
+  </main>
+
+  <footer class="rodape">
+    <p>Feito com carinho • Toque ou clique num card pra ver a sinopse e as piadinhas</p>
+  </footer>
+
+  <!-- Dica: a dedução de pôster usa a API OMDb. Ponha sua chave em app.js. -->
+  <script src="filmes.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

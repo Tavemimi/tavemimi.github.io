@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nossos Poemas ✍️</title>
+  <meta name="description" content="Os poemas que escrevemos um pro outro." />
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="alternate icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ctext y='14' font-size='14'%3E%F0%9F%8E%AC%3C/text%3E%3C/svg%3E" />
+  <link rel="apple-touch-icon" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="nav">
+    <span class="marca">🎬❤️ Nosso Cantinho</span>
+    <a href="index.html">Início</a>
+    <a href="filmes.html">Filmes</a>
+    <a href="poemas.html" class="ativo">Poemas</a>
+    <a href="fotos.html">Fotos</a>
+  </nav>
+
+  <header class="topo">
+    <h1>Nossos Poemas <span aria-hidden="true">✍️❤️</span></h1>
+    <p class="subtitulo">Palavras que escrevemos um pro outro.</p>
+  </header>
+
+  <main>
+    <section class="poemas-lista" id="poemas-lista" aria-live="polite"></section>
+    <p class="vazio" id="poemas-vazio" hidden>Ainda não temos poemas por aqui. ✍️</p>
+  </main>
+
+  <footer class="rodape">
+    <p>Feito com carinho ❤️</p>
+  </footer>
+
+  <script src="poemas.js"></script>
+  <script src="poemas-app.js"></script>
+</body>
+</html>

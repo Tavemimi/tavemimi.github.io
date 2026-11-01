@@ -129,15 +129,47 @@ git push
 
 Em um ou dois minutos o site publicado já mostra a mudança.
 
+## Seções do site
+
+O site tem uma página de início (capa) e seções, ligadas pelo menu no topo:
+
+- **Início** (`index.html`) — a capa com os atalhos pras seções.
+- **Filmes** (`filmes.html`) — o acervo de filmes.
+- **Poemas** (`poemas.html`) — os poemas de vocês.
+- **Fotos** (`fotos.html`) — o álbum de fotos (em breve).
+
+### Adicionar um poema
+
+Abra **`poemas.js`** e copie um bloco, preenchendo:
+
+```js
+{
+  titulo: "Título do poema",
+  autor: "Quem escreveu",       // ex: "Gustavo", "Mimi", "Nós dois"
+  data: "2026-08-15",           // AAAA-MM-DD (ou "" para omitir)
+  texto: `Primeira linha do poema
+Segunda linha
+As quebras de linha são preservadas.`
+},
+```
+
+Dica: escreva o `texto` entre crases (`` ` ``) pra poder quebrar linha à vontade,
+do jeitinho que o poema deve aparecer.
+
 ## Arquivos do projeto
 
-| Arquivo      | Para que serve                                               |
-|--------------|--------------------------------------------------------------|
-| `index.html` | A página.                                                    |
-| `style.css`  | O visual (galeria, cards, animação de virar).                |
-| `app.js`     | A lógica (render, busca, ordenação, busca de pôster).        |
-| `filmes.js`  | **Seus filmes.** O único arquivo que você edita sempre.      |
-| `img/`       | Pôsteres próprios (opcional — só se quiser trocar algum).    |
+| Arquivo          | Para que serve                                            |
+|------------------|-----------------------------------------------------------|
+| `index.html`     | A capa (página de início).                                |
+| `filmes.html`    | A página do acervo de filmes.                             |
+| `poemas.html`    | A página dos poemas.                                      |
+| `fotos.html`     | A página de fotos (em breve).                             |
+| `style.css`      | O visual de todas as páginas (compartilhado).             |
+| `app.js`         | A lógica dos filmes (render, busca, ordenação).           |
+| `filmes.js`      | **Seus filmes.** Edite aqui pra mexer no acervo.          |
+| `poemas-app.js`  | A lógica dos poemas.                                       |
+| `poemas.js`      | **Seus poemas.** Edite aqui pra mexer nos poemas.         |
+| `img/`           | Pôsteres/imagens próprias (opcional).                     |
 
 ## Dúvidas rápidas
 

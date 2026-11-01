@@ -283,3 +283,196 @@ body {
   background: rgba(255, 255, 255, 0.15);
   border-radius: 999px;
 }
+
+/* ============================================================
+   MENU DE NAVEGAÇÃO (compartilhado entre as páginas)
+   ============================================================ */
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding: 16px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(15, 13, 26, 0.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.nav .marca {
+  font-weight: 700;
+  margin-right: auto;
+  font-size: 1.05rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-left: 6px;
+}
+
+.nav a {
+  color: var(--texto-suave);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 8px 16px;
+  border-radius: 999px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.nav a:hover { color: var(--texto); background: rgba(255, 255, 255, 0.06); }
+
+/* link da página atual fica destacado */
+.nav a.ativo {
+  color: #fff;
+  background: linear-gradient(120deg, var(--destaque-2), var(--destaque));
+}
+
+@media (max-width: 560px) {
+  .nav .marca { width: 100%; margin: 0 0 6px; justify-content: center; }
+  .nav { justify-content: center; }
+}
+
+/* ============================================================
+   PÁGINA DE INÍCIO (capa)
+   ============================================================ */
+.capa {
+  min-height: calc(100vh - 70px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 20px 60px;
+  gap: 14px;
+}
+
+.capa .emoji-grande {
+  font-size: clamp(3rem, 10vw, 5rem);
+  line-height: 1;
+  animation: flutua 3s ease-in-out infinite;
+}
+
+@keyframes flutua {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.capa h1 {
+  font-size: clamp(2rem, 6vw, 3.4rem);
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  max-width: 14ch;
+}
+
+.capa .sub {
+  color: var(--texto-suave);
+  font-weight: 300;
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  max-width: 44ch;
+}
+
+.capa .cards-secoes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 18px;
+  margin-top: 28px;
+  width: min(760px, 100%);
+}
+
+.capa .secao-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 28px 20px;
+  border-radius: var(--raio);
+  background: var(--card);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  color: var(--texto);
+  text-decoration: none;
+  transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+
+.capa .secao-link:hover {
+  transform: translateY(-4px);
+  border-color: var(--destaque-2);
+  box-shadow: var(--sombra);
+}
+
+.capa .secao-link .ic { font-size: 2.4rem; }
+.capa .secao-link .nome { font-weight: 600; font-size: 1.1rem; }
+.capa .secao-link .desc { color: var(--texto-suave); font-size: 0.85rem; }
+
+/* ============================================================
+   SEÇÃO DE POEMAS
+   ============================================================ */
+.poemas-lista {
+  max-width: 760px;
+  margin: 10px auto 50px;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.poema {
+  background: linear-gradient(160deg, var(--card-2), var(--card));
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: var(--raio);
+  padding: 28px 28px 24px;
+  box-shadow: var(--sombra);
+  position: relative;
+  overflow: hidden;
+}
+
+.poema::before {
+  content: "\201C"; /* aspas decorativas */
+  position: absolute;
+  top: -10px;
+  left: 14px;
+  font-size: 5rem;
+  color: rgba(124, 92, 255, 0.18);
+  font-family: Georgia, serif;
+}
+
+.poema h2 {
+  font-size: 1.35rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.poema .poema-meta {
+  color: var(--texto-suave);
+  font-size: 0.82rem;
+  margin-bottom: 16px;
+}
+
+.poema .corpo {
+  font-size: 1.02rem;
+  line-height: 1.8;
+  color: var(--texto);
+  white-space: pre-wrap; /* preserva as quebras de linha do poema */
+  font-weight: 300;
+}
+
+.poema .assinatura {
+  margin-top: 18px;
+  text-align: right;
+  font-style: italic;
+  color: var(--texto-suave);
+  font-size: 0.95rem;
+}
+
+/* ============================================================
+   AVISO "EM BREVE" (para seções ainda não prontas)
+   ============================================================ */
+.em-breve {
+  text-align: center;
+  color: var(--texto-suave);
+  padding: 80px 20px;
+  font-size: 1.1rem;
+}
+.em-breve .ic { font-size: 3rem; display: block; margin-bottom: 12px; }
