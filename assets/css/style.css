@@ -430,17 +430,22 @@ body {
 .poema::before {
   content: "\201C"; /* aspas decorativas */
   position: absolute;
-  top: -10px;
-  left: 14px;
-  font-size: 5rem;
-  color: rgba(124, 92, 255, 0.18);
+  top: 2px;
+  left: 18px;
+  font-size: 4.5rem;
+  line-height: 1;
+  color: var(--destaque); /* rosa vivo, com mais destaque */
+  opacity: 0.9;
   font-family: Georgia, serif;
+  text-shadow: 0 2px 8px rgba(232, 74, 111, 0.4); /* brilho sutil */
 }
 
+/* afasta o conteúdo do poema das aspas, pra elas não ficarem coladas */
 .poema h2 {
   font-size: 1.35rem;
   font-weight: 600;
   margin-bottom: 4px;
+  padding-top: 32px; /* espaço pras aspas respirarem acima do título */
 }
 
 .poema .poema-meta {
@@ -647,17 +652,26 @@ body::before {
 
 /* ---- Brilho pulsante nos títulos ---- */
 .capa h1, .topo h1 {
-  background: linear-gradient(100deg, var(--texto) 20%, var(--destaque) 50%, var(--destaque-2) 80%);
+  /* Padrão repetido 2x e que começa/termina na MESMA cor (rosa), pra o loop
+     ser contínuo, sem salto. A animação desliza exatamente uma repetição. */
+  background: linear-gradient(
+    100deg,
+    #ff6b9d, #ffffff, #c0304f, #a05cff, #5c9dff,
+    #ff6b9d, #ffffff, #c0304f, #a05cff, #5c9dff,
+    #ff6b9d
+  );
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   background-size: 200% auto;
-  animation: brilhoTexto 6s ease-in-out infinite;
+  animation: brilhoTexto 7s linear infinite;
 }
 
 @keyframes brilhoTexto {
-  0%, 100% { background-position: 0% center; }
-  50% { background-position: 100% center; }
+  /* vai de 0 a -50% (uma repetição inteira): como o padrão se repete,
+     o fim coincide exatamente com o início -> loop sem retrocesso */
+  from { background-position: 0% center; }
+  to   { background-position: -200% center; }
 }
 
 /* ---- Coração pulsante nos emojis da marca/títulos ---- */
@@ -682,4 +696,39 @@ body::before {
     animation: none !important;
   }
   body { background-position: 0 0; }
+}
+
+/* ============================================================
+   CONTORNO PRETO NAS LETRAS (destaque sobre o fundo vinho)
+   ------------------------------------------------------------
+   Usa text-shadow em 4+ direções pra simular um contorno fino.
+   Compatível com todos os navegadores.
+   ============================================================ */
+/* Contorno sutil só nos textos maiores/sobre o fundo, pra destacar.
+   Deixei de fora os detalhes pequenos (metadados, legendas finas), onde
+   o contorno engrossa demais e fica ruim. */
+.nav a,
+.nav .marca,
+.subtitulo,
+.capa .sub,
+.poema h2,
+.secao-link .nome {
+  text-shadow:
+    -0.5px -0.5px 0 rgba(0, 0, 0, 0.5),
+     0.5px -0.5px 0 rgba(0, 0, 0, 0.5),
+    -0.5px  0.5px 0 rgba(0, 0, 0, 0.5),
+     0.5px  0.5px 0 rgba(0, 0, 0, 0.5),
+     0    1px 2px rgba(0, 0, 0, 0.4);
+}
+
+/* Títulos grandes: mantém o gradiente arco-íris deslizante (definido lá em cima
+   na seção de animações) E ganha um contorno preto fino via drop-shadow.
+   Contorno fino (1px) em 4 direções pra não borrar como antes. */
+.capa h1,
+.topo h1 {
+  filter:
+    drop-shadow(1px 0 0 #000)
+    drop-shadow(-1px 0 0 #000)
+    drop-shadow(0 1px 0 #000)
+    drop-shadow(0 -1px 0 #000);
 }
