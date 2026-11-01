@@ -155,17 +155,24 @@ function criarCard(filme) {
      - senão, busca automaticamente na OMDb pelo título */
   const slot = card.querySelector(".poster-slot");
 
-  /* Mostra o fallback de cara, pra o card NUNCA ficar vazio.
-     Assim que a imagem real carregar, ela substitui o fallback. */
+  /* Mostra o fallback de cara, pra o card NUNCA ficar vazio. */
   mostrarFallback(slot, filme.titulo);
 
   const definirImagem = (url) => {
-    const img = new Image();
+    /* Cria a <img> já dentro do slot (no DOM), com o fallback por trás.
+       Assim funciona mesmo com imagem em cache ou lazy loading. */
+    const img = document.createElement("img");
     img.alt = `Pôster de ${filme.titulo}`;
-    img.loading = "lazy";
-    img.onload = () => { slot.innerHTML = ""; slot.appendChild(img); };
-    /* se der erro, o fallback que ja esta no slot permanece */
+    img.decoding = "async";
+    /* Só limpa o fallback quando a imagem realmente aparecer. */
+    img.addEventListener("load", () => { slot.innerHTML = ""; slot.appendChild(img); });
+    img.addEventListener("error", () => { /* mantém o fallback que já está no slot */ });
     img.src = url;
+    /* Se a imagem já estava em cache, o 'load' pode não disparar: trata na hora. */
+    if (img.complete && img.naturalWidth > 0) {
+      slot.innerHTML = "";
+      slot.appendChild(img);
+    }
   };
 
   if (filme.posterUrl) {
