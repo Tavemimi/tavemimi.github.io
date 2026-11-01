@@ -20,6 +20,7 @@ const elVazio = document.getElementById("vazio");
 
 /* Lista de filmes vinda de filmes.js */
 const filmes = Array.isArray(window.FILMES) ? window.FILMES.slice() : [];
+console.log("[DIAG] app.js carregado. window.FILMES =", window.FILMES ? window.FILMES.length + " filmes" : "INDEFINIDO!");
 
 /* Cache de pôsteres já buscados nesta sessão (evita repetir chamadas) */
 const cachePoster = new Map();
@@ -46,16 +47,19 @@ async function buscarPoster(filme) {
   }
   if (cachePoster.has(chave)) return cachePoster.get(chave);
 
+  const urlApi = `https://www.omdbapi.com/?${params.toString()}`;
+  console.log("[DIAG] buscando pôster:", filme.titulo, "->", urlApi);
   try {
-    const resp = await fetch(`https://www.omdbapi.com/?${params.toString()}`);
+    const resp = await fetch(urlApi);
     const dados = await resp.json();
+    console.log("[DIAG] resposta OMDb p/", filme.titulo, ":", dados.Response, "| Poster:", dados.Poster);
     const poster = dados && dados.Poster && dados.Poster !== "N/A"
       ? dados.Poster
       : null;
     cachePoster.set(chave, poster);
     return poster;
   } catch (e) {
-    console.warn("Não consegui buscar o pôster de", termo, e);
+    console.error("[DIAG] FALHA no fetch de", filme.titulo, e);
     cachePoster.set(chave, null);
     return null;
   }
