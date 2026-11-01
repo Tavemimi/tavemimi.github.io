@@ -207,3 +207,11 @@ alterar os valores ali.
 
 **Posso ter um filme sem data ou sem nota?**
 Pode. Deixe `data: ""` e `nota: 0` que o card continua funcionando normalmente.
+
+**Editei algo mas o site mostra a versão antiga (cache).**
+As páginas usam `?v=DATA` no final dos links de CSS e dos dados (ex:
+`style.css?v=2026-11-01`). Quando você mudar `filmes.js`, `poemas.js`, `fotos.js`
+ou o visual, troque esse número de versão nos arquivos `.html` (use a data do dia,
+ex: `?v=2026-11-15`). Isso faz todos os dispositivos baixarem a versão nova em vez
+da guardada em cache. Dá pra trocar todos de uma vez com "localizar e substituir"
+no editor (procure por `?v=2026-11-01`).
