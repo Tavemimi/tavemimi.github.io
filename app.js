@@ -145,22 +145,26 @@ function criarCard(filme) {
      - se o filme tem posterUrl, usa essa imagem (manual tem prioridade)
      - senão, busca automaticamente na OMDb pelo título */
   const slot = card.querySelector(".poster-slot");
+
+  /* Mostra o fallback de cara, pra o card NUNCA ficar vazio.
+     Assim que a imagem real carregar, ela substitui o fallback. */
+  mostrarFallback(slot, filme.titulo);
+
   const definirImagem = (url) => {
     const img = new Image();
     img.alt = `Pôster de ${filme.titulo}`;
     img.loading = "lazy";
     img.onload = () => { slot.innerHTML = ""; slot.appendChild(img); };
-    img.onerror = () => mostrarFallback(slot, filme.titulo);
+    /* se der erro, o fallback que ja esta no slot permanece */
     img.src = url;
   };
 
   if (filme.posterUrl) {
     definirImagem(filme.posterUrl);
   } else {
-    buscarPoster(filme).then((url) => {
-      if (url) definirImagem(url);
-      else mostrarFallback(slot, filme.titulo);
-    });
+    buscarPoster(filme)
+      .then((url) => { if (url) definirImagem(url); })
+      .catch((e) => console.warn("Falha ao buscar pôster:", filme.titulo, e));
   }
 
   return card;
