@@ -1,0 +1,21 @@
+Coloque aqui as fotos do album do casal.
+
+Como fazer:
+1. Salve a foto nesta pasta (fotos/) com um nome simples, sem espacos nem
+   acentos. Ex: praia-2026.jpg
+2. No arquivo dados/fotos.js, adicione um bloco apontando pra ela pelo NOME
+   (nao precisa escrever o caminho):
+      {
+        arquivo: "praia-2026.jpg",
+        legenda: "Nosso dia na praia",
+        data: "2026-08-15",
+        local: "Praia de Copacabana"
+      }
+
+Dicas:
+- Formatos: .jpg, .png ou .webp.
+- Qualquer proporcao funciona (o card recorta pra 4:3, e ao ampliar a foto
+  aparece inteira).
+- Enquanto um arquivo nao existir, o card mostra um icone de camera no lugar.
+
+Os exemplos atuais esperam: exemplo-1.jpg, exemplo-2.jpg, exemplo-3.jpg

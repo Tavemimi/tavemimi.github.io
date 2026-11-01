@@ -16,8 +16,8 @@
                         na URL da página do filme no site imdb.com.
                         Quando preenchido, tem prioridade sobre o tituloBusca.
    ano         (número) Ano de lançamento. Ajuda a achar o pôster certo.
-   posterUrl   (texto)  OPCIONAL. Caminho de uma imagem na pasta img/
-                        (ex: "img/wall-e.jpg") OU um link direto.
+   posterUrl   (texto)  OPCIONAL. Um link direto de imagem (https://...)
+                        OU o caminho de um arquivo que você guarde no projeto.
                         Se preenchido, essa imagem tem PRIORIDADE sobre a
                         busca automática. Deixe "" para o site buscar sozinho.
    data        (texto)  Data em que assistiram juntos. Formato "AAAA-MM-DD".

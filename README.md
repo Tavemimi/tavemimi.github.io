@@ -136,7 +136,21 @@ O site tem uma página de início (capa) e seções, ligadas pelo menu no topo:
 - **Início** (`index.html`) — a capa com os atalhos pras seções.
 - **Filmes** (`filmes.html`) — o acervo de filmes.
 - **Poemas** (`poemas.html`) — os poemas de vocês.
-- **Fotos** (`fotos.html`) — o álbum de fotos (em breve).
+- **Fotos** (`fotos.html`) — o álbum de fotos (toque numa foto pra ampliar).
+
+### Adicionar uma foto
+
+1. Salve a imagem na pasta **`fotos/`** (nome simples, sem espaços nem acentos).
+2. Abra **`fotos.js`** e copie um bloco:
+
+```js
+{
+  src: "fotos/praia-2026.jpg",     // o arquivo que você salvou em fotos/
+  legenda: "Nosso dia na praia",
+  data: "2026-08-15",              // AAAA-MM-DD (ou "" para omitir)
+  local: "Praia de Copacabana"     // opcional
+},
+```
 
 ### Adicionar um poema
 
@@ -156,20 +170,30 @@ As quebras de linha são preservadas.`
 Dica: escreva o `texto` entre crases (`` ` ``) pra poder quebrar linha à vontade,
 do jeitinho que o poema deve aparecer.
 
-## Arquivos do projeto
+## Estrutura de pastas
 
-| Arquivo          | Para que serve                                            |
-|------------------|-----------------------------------------------------------|
-| `index.html`     | A capa (página de início).                                |
-| `filmes.html`    | A página do acervo de filmes.                             |
-| `poemas.html`    | A página dos poemas.                                      |
-| `fotos.html`     | A página de fotos (em breve).                             |
-| `style.css`      | O visual de todas as páginas (compartilhado).             |
-| `app.js`         | A lógica dos filmes (render, busca, ordenação).           |
-| `filmes.js`      | **Seus filmes.** Edite aqui pra mexer no acervo.          |
-| `poemas-app.js`  | A lógica dos poemas.                                       |
-| `poemas.js`      | **Seus poemas.** Edite aqui pra mexer nos poemas.         |
-| `img/`           | Pôsteres/imagens próprias (opcional).                     |
+```
+index.html          → a capa (fica na raiz; é o que o GitHub Pages abre)
+favicon.svg         → o ícone do site
+paginas/            → as outras páginas
+  filmes.html
+  poemas.html
+  fotos.html
+assets/
+  css/style.css     → o visual (compartilhado por todas as páginas)
+  js/               → a lógica
+    app.js            (filmes)
+    poemas-app.js
+    fotos-app.js
+dados/              → ⭐ OS ARQUIVOS QUE VOCÊ EDITA NO DIA A DIA
+  filmes.js
+  poemas.js
+  fotos.js
+fotos/              → as imagens do álbum de fotos
+```
+
+> No dia a dia, você só mexe na pasta **`dados/`** (e joga as imagens em
+> **`fotos/`**). O resto é a "mecânica" do site e raramente muda.
 
 ## Dúvidas rápidas
 

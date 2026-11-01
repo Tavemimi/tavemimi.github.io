@@ -6,19 +6,19 @@
   <title>Nossas Fotos 📸</title>
   <meta name="description" content="O álbum dos nossos momentos." />
 
-  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
   <link rel="alternate icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ctext y='14' font-size='14'%3E%F0%9F%8E%AC%3C/text%3E%3C/svg%3E" />
-  <link rel="apple-touch-icon" href="favicon.svg" />
+  <link rel="apple-touch-icon" href="../favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
 </head>
 <body>
 
   <nav class="nav">
     <span class="marca">🎬❤️ Nosso Cantinho</span>
-    <a href="index.html">Início</a>
+    <a href="../index.html">Início</a>
     <a href="filmes.html">Filmes</a>
     <a href="poemas.html">Poemas</a>
     <a href="fotos.html" class="ativo">Fotos</a>
@@ -26,19 +26,26 @@
 
   <header class="topo">
     <h1>Nossas Fotos <span aria-hidden="true">📸❤️</span></h1>
-    <p class="subtitulo">O álbum dos nossos momentos.</p>
+    <p class="subtitulo">O álbum dos nossos momentos. Toque numa foto pra ampliar.</p>
   </header>
 
   <main>
-    <p class="em-breve">
-      <span class="ic" aria-hidden="true">📸</span>
-      Em breve: o álbum de fotos do casal.
-    </p>
+    <section class="fotos-grade" id="fotos-grade" aria-live="polite"></section>
+    <p class="vazio" id="fotos-vazio" hidden>Ainda não temos fotos por aqui. 📸</p>
   </main>
 
   <footer class="rodape">
     <p>Feito com carinho ❤️</p>
   </footer>
 
+  <!-- Lightbox: foto em tela cheia -->
+  <div class="lightbox" id="lightbox" hidden>
+    <button class="lb-fechar" id="lb-fechar" type="button" aria-label="Fechar">✕</button>
+    <img class="lb-img" id="lb-img" alt="" />
+    <p class="lb-legenda" id="lb-legenda"></p>
+  </div>
+
+  <script src="../dados/fotos.js"></script>
+  <script src="../assets/js/fotos-app.js"></script>
 </body>
 </html>
