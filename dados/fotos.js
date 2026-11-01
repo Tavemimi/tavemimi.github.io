@@ -19,24 +19,10 @@
 const FOTOS = [
 
   {
-    arquivo: "exemplo-1.jpg",
-    legenda: "(exemplo) Troque pela legenda da nossa foto.",
-    data: "2026-08-15",
-    local: ""
-  },
-
-  {
-    arquivo: "exemplo-2.jpg",
-    legenda: "(exemplo) Troque pela legenda da nossa foto.",
-    data: "2026-09-10",
-    local: ""
-  },
-
-  {
-    arquivo: "exemplo-3.jpg",
-    legenda: "(exemplo) Troque pela legenda da nossa foto.",
-    data: "2026-10-30",
-    local: ""
+    arquivo: "trend-foto-coracao.jpeg",
+    legenda: "648 km entre a gente, mas o coração dá um jeito de se encontrar. ✈️❤️",
+    data: "2026-10-07",
+    local: "Minas Gerais ↔ São Paulo"
   }
 
 ];
