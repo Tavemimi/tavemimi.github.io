@@ -420,6 +420,20 @@ const FILMES = [
     piadas: [
       "(exemplo) Trocar pela nossa lembrança deste filme."
     ]
+  },
+
+  {
+    titulo: "Shrek 2",
+    tituloBusca: "Shrek 2",
+    ano: 2004,
+    posterUrl: "",
+    data: "2026-11-01",
+    nota: 5,
+    sinopse: "Shrek e Fiona visitam o reino de Tão Tão Distante para conhecer os pais dela, mas o Rei e a Fada Madrinha não aceitam o ogro como genro.",
+    piadas: [
+      "Só tem puta nesse reino kkkk",
+      "O Príncipe Encantado queima a rosca, usa batom de cereja... me fala se não é um seca buceta"
+    ]
   }
 
 ];
