@@ -2,23 +2,47 @@
 
 Um álbum de lembranças dos filmes que o casal já assistiu junto. Cada filme vira
 um card com pôster, nota em estrelinhas, data em que assistiram, sinopse curta e
-as piadinhas internas de vocês. Toque (celular) ou clique (mouse) no card pra ele
-virar e mostrar os detalhes.
+as piadinhas internas de vocês. Toque (no celular) ou clique (no mouse) num card
+pra ele virar e mostrar os detalhes.
 
 Site estático — HTML, CSS e JavaScript puro. Nenhum build, nenhum servidor. Os
-pôsteres são buscados automaticamente pelo título na API gratuita OMDb, e você
-pode sobrescrever qualquer um com uma imagem própria quando quiser.
+pôsteres são buscados automaticamente pelo título do filme, e você pode trocar
+qualquer um por uma imagem própria quando quiser.
+
+## Sumário
+
+- [Como rodar](#como-rodar)
+- [Como adicionar ou editar um filme](#como-adicionar-ou-editar-um-filme)
+- [Os campos de cada filme](#os-campos-de-cada-filme)
+- [Sobre o pôster automático](#sobre-o-pôster-automático)
+- [Usar uma imagem própria](#usar-uma-imagem-própria)
+- [Publicar as mudanças no site](#publicar-as-mudanças-no-site)
+- [Arquivos do projeto](#arquivos-do-projeto)
+- [Dúvidas rápidas](#dúvidas-rápidas)
 
 ## Como rodar
 
-Só abrir o arquivo `index.html` no navegador. Dois cliques e pronto.
+Abra o arquivo `index.html` no navegador — dois cliques e pronto. Para testar do
+jeito mais parecido com o site publicado, use um servidor local simples (opcional):
 
-> Os pôsteres automáticos precisam de internet (a busca é feita na API OMDb).
-> Uma imagem que você coloque manualmente na pasta `img/` funciona offline.
+```
+npx serve
+```
 
-## Como adicionar um filme
+Isso abre o site num endereço tipo `http://localhost:3000`. Para parar, `Ctrl+C`.
 
-Abra o arquivo **`filmes.js`** e copie um bloco, preenchendo os campos:
+> Os pôsteres automáticos precisam de internet. Uma imagem colocada na pasta
+> `img/` funciona mesmo offline.
+
+## Como adicionar ou editar um filme
+
+Tudo acontece no arquivo **`filmes.js`** — é o único que você edita no dia a dia.
+
+**Para adicionar:** copie um bloco `{ ... }` existente, cole no final da lista
+(antes do `];`), preencha os campos e separe da entrada anterior com uma vírgula.
+
+**Para editar:** ache o filme na lista e altere o campo que quiser (a data real,
+a nota de verdade, as piadinhas de vocês).
 
 ```js
 {
@@ -27,7 +51,7 @@ Abra o arquivo **`filmes.js`** e copie um bloco, preenchendo os campos:
   ano: 2024,
   posterUrl: "",                   // deixe "" para buscar o pôster automático
   data: "2026-03-10",              // data em que vocês assistiram (AAAA-MM-DD)
-  nota: 4.5,                       // de 0 a 5 (aceita meia estrela: 3.5, 4.5...)
+  nota: 4.5,                       // de 0 a 5 (aceita meia estrela)
   sinopse: "Uma sinopse bem curtinha do filme.",
   piadas: [
     "Primeira piadinha ou lembrança.",
@@ -36,65 +60,94 @@ Abra o arquivo **`filmes.js`** e copie um bloco, preenchendo os campos:
 },
 ```
 
-Lembre de separar cada filme com vírgula. É o único arquivo que você edita no dia
-a dia.
+> As piadinhas que já vêm com `(exemplo)` no texto são só preenchimento.
+> Troque pelas lembranças reais de vocês quando quiser.
 
-### Sobre o pôster automático
+## Os campos de cada filme
 
-Com `posterUrl: ""`, o site busca o pôster sozinho na API OMDb pelo título. Como
-essa base é em inglês, o campo **`tituloBusca`** (nome original do filme) ajuda a
-achar o pôster certo.
+| Campo         | Obrigatório | O que é                                                        |
+|---------------|-------------|----------------------------------------------------------------|
+| `titulo`      | sim         | Nome do filme, em português.                                   |
+| `tituloBusca` | não         | Nome em inglês/original — ajuda a encontrar o pôster certo.    |
+| `imdbId`      | não         | Código do filme no IMDb (ex: `tt0910970`). Veja abaixo.        |
+| `ano`         | sim         | Ano de lançamento.                                             |
+| `posterUrl`   | não         | Imagem própria do pôster. Deixe `""` para buscar automático.   |
+| `data`        | não         | Data em que assistiram, no formato `AAAA-MM-DD`.               |
+| `nota`        | não         | Avaliação de 0 a 5 (aceita meia estrela, ex: `3.5`).           |
+| `sinopse`     | sim         | Uma descrição curta do filme.                                  |
+| `piadas`      | não         | Lista de piadinhas/lembranças. Deixe `[]` se não tiver.        |
 
-Se mesmo assim a busca trouxer o filme errado, use o campo **`imdbId`** — é o
-código do filme no IMDb, que acha o pôster certinho sempre:
+## Sobre o pôster automático
+
+Com `posterUrl: ""`, o site busca o pôster sozinho pelo título do filme. Como a
+base de dados é em inglês, preencher o campo **`tituloBusca`** (nome original do
+filme) faz o pôster certo aparecer com muito mais frequência.
+
+Se mesmo assim vier o filme errado, use o campo **`imdbId`**: é o código do filme
+no IMDb, que acha o pôster certinho sempre. Você encontra esse código na URL da
+página do filme no site imdb.com (a parte que começa com `tt`):
 
 ```js
 {
   titulo: "WALL-E",
-  imdbId: "tt0910970",   // você acha esse código na URL do filme no site imdb.com
+  imdbId: "tt0910970",   // está na URL do filme no imdb.com
   ano: 2008,
   posterUrl: "",
   // ... resto dos campos
 },
 ```
 
-### Usar uma imagem própria (opcional)
+## Usar uma imagem própria
 
-Se você preferir uma imagem específica (ou quiser que funcione offline), salve a
-foto na pasta **`img/`** e aponte o `posterUrl` pra ela:
+Se você preferir um pôster específico (ou uma foto de vocês, ou quiser que
+funcione offline), salve a imagem na pasta **`img/`** e aponte o `posterUrl` para
+ela:
 
 ```js
 posterUrl: "img/meu-filme.jpg",
 ```
 
-Quando `posterUrl` está preenchido, essa imagem tem prioridade e a API nem é
-consultada. Também aceita um link direto de imagem da internet.
+Dicas para a imagem:
 
-## A chave da API
+- Use um nome simples, sem espaços nem acentos (ex: `meu-filme.jpg`).
+- Formatos: `.jpg`, `.png` ou `.webp`.
+- O ideal é um pôster "em pé" (proporção 2:3).
 
-A chave da OMDb já está configurada no arquivo `app.js`:
+Quando `posterUrl` está preenchido, essa imagem tem prioridade e a busca
+automática nem é feita para aquele filme. O campo também aceita um link direto de
+imagem da internet.
 
-```js
-const OMDB_API_KEY = "12e8652b";
+## Publicar as mudanças no site
+
+Depois de editar o `filmes.js` (ou qualquer arquivo), publique assim:
+
+```
+git add filmes.js
+git commit -m "atualiza tal filme"
+git push
 ```
 
-É uma chave gratuita (limite de 1000 buscas por dia, mais que suficiente). Como o
-repositório é público, essa chave fica visível — para a OMDb isso é de baixo
-risco, mas se um dia quiser trocar, pegue outra em
-https://www.omdbapi.com/apikey.aspx e substitua o texto acima.
+Em um ou dois minutos o site publicado já mostra a mudança.
 
-## Publicar no GitHub Pages
+## Arquivos do projeto
 
-Como seu portfólio já roda no GitHub Pages, é só colocar esta pasta no repositório
-(por exemplo em `projects/acervo-filmes/`) e acessar pela URL do Pages. Por ser
-100% estático, não precisa de nenhuma configuração extra.
+| Arquivo      | Para que serve                                               |
+|--------------|--------------------------------------------------------------|
+| `index.html` | A página.                                                    |
+| `style.css`  | O visual (galeria, cards, animação de virar).                |
+| `app.js`     | A lógica (render, busca, ordenação, busca de pôster).        |
+| `filmes.js`  | **Seus filmes.** O único arquivo que você edita sempre.      |
+| `img/`       | Pôsteres próprios (opcional — só se quiser trocar algum).    |
 
-## Arquivos
+## Dúvidas rápidas
 
-| Arquivo      | Para que serve                                            |
-|--------------|-----------------------------------------------------------|
-| `index.html` | A página.                                                 |
-| `style.css`  | O visual (galeria, cards, animação de virar).             |
-| `app.js`     | A lógica (render, busca, ordenação, busca de pôster).     |
-| `filmes.js`  | **Seus filmes.** O único arquivo que você edita sempre.   |
-| `img/`       | Pôsteres próprios (opcional — só se quiser sobrescrever). |
+**Um pôster não apareceu, e agora?**
+Preencha o `tituloBusca` (nome em inglês) do filme, ou use o `imdbId`. Se quiser
+garantir, baixe a imagem para a pasta `img/` e aponte o `posterUrl` para ela.
+
+**Como mudo as cores/visual?**
+No arquivo `style.css`, no começo, há um bloco `:root` com as cores do site. É só
+alterar os valores ali.
+
+**Posso ter um filme sem data ou sem nota?**
+Pode. Deixe `data: ""` e `nota: 0` que o card continua funcionando normalmente.
