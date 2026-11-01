@@ -12,3 +12,11 @@ node_modules/
 
 # Logs
 *.log
+
+# Conversa pessoal do casal (NAO publicar) - usada so pra extrair as datas
+Histórico/
+Historico/
+
+# Scripts temporarios
+_*.js
+_*.json
