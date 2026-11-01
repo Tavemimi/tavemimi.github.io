@@ -98,13 +98,13 @@ const FILMES = [
   },
 
   {
-    titulo: "Cara de Um, Focinho do Outro",
-    tituloBusca: "Strays",
-    ano: 2023,
-    posterUrl: "https://m.media-amazon.com/images/M/MV5BMDZjN2E2MDYtZWY4ZS00NGMxLWE3MjktYTQ3MzY2ZmNlMTY5XkEyXkFqcGc@._V1_QL75_UX380_CR0,20,380,562_.jpg",
+    titulo: "Cara de Um, Focinho de Outro",
+    tituloBusca: "Hoppers",
+    ano: 2026,
+    posterUrl: "https://image.tmdb.org/t/p/w500/ftPFJBGbldoWiiPrmesW96zBzdH.jpg",
     data: "2025-02-23",
     nota: 3.5,
-    sinopse: "Um homem e seu cachorro acordam um dia com as mentes trocadas e precisam lidar com a vida um do outro.",
+    sinopse: "Animação da Pixar: uma jovem tem a consciência transferida para o corpo de um castor robótico e passa a transitar entre o mundo humano e o dos animais.",
     piadas: [
       "(exemplo) Trocar pela nossa lembrança deste filme."
     ]
