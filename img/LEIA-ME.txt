@@ -1,0 +1,16 @@
+Esta pasta e OPCIONAL.
+
+Os posteres do acervo sao buscados automaticamente pela internet (API OMDb),
+entao voce nao precisa baixar imagem nenhuma para o site funcionar.
+
+Use esta pasta apenas quando quiser SOBRESCREVER o poster de um filme com uma
+imagem sua (por exemplo, uma foto de voces assistindo, ou um poster especifico
+que voce prefira).
+
+Como fazer:
+1. Salve a imagem aqui (ex: meu-filme.jpg) - nome simples, sem espacos nem acentos.
+2. No arquivo filmes.js, aponte o campo posterUrl do filme para ela, ex:
+      posterUrl: "img/meu-filme.jpg"
+
+Quando posterUrl esta preenchido, essa imagem tem prioridade e a API nem e
+consultada para aquele filme.

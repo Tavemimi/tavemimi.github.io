@@ -1,0 +1,285 @@
+/* ============================================================
+   NOSSO ACERVO DE FILMES — estilos
+   ============================================================ */
+
+:root {
+  --bg: #0f0d1a;
+  --bg-2: #171429;
+  --card: #1e1b31;
+  --card-2: #272343;
+  --texto: #f3f0ff;
+  --texto-suave: #b7b0d4;
+  --destaque: #ff5d8f;
+  --destaque-2: #7c5cff;
+  --estrela: #ffd166;
+  --sombra: 0 12px 30px rgba(0, 0, 0, 0.45);
+  --raio: 16px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  color: var(--texto);
+  background:
+    radial-gradient(1200px 600px at 10% -10%, rgba(124, 92, 255, 0.25), transparent 60%),
+    radial-gradient(1000px 500px at 110% 10%, rgba(255, 93, 143, 0.2), transparent 55%),
+    var(--bg);
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* -------- Cabeçalho -------- */
+.topo {
+  text-align: center;
+  padding: 48px 20px 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.topo h1 {
+  font-weight: 700;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  letter-spacing: -0.5px;
+}
+
+.subtitulo {
+  color: var(--texto-suave);
+  margin-top: 8px;
+  font-weight: 300;
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
+}
+
+.controles {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 28px;
+}
+
+.busca, .ordenar {
+  font: inherit;
+  color: var(--texto);
+  background: var(--card);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 12px 16px;
+  border-radius: 999px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.busca {
+  width: min(360px, 80vw);
+}
+
+.busca::placeholder { color: var(--texto-suave); }
+
+.busca:focus, .ordenar:focus {
+  border-color: var(--destaque-2);
+  box-shadow: 0 0 0 3px rgba(124, 92, 255, 0.25);
+}
+
+.ordenar { cursor: pointer; }
+.ordenar option { background: var(--card); }
+
+.stats {
+  color: var(--texto-suave);
+  margin-top: 18px;
+  font-size: 0.9rem;
+}
+
+/* -------- Grade de cards -------- */
+.grade {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 24px;
+  max-width: 1200px;
+  margin: 10px auto 40px;
+  padding: 0 20px;
+}
+
+/* Cada card tem perspectiva pra dar profundidade ao flip */
+.card {
+  perspective: 1200px;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  text-align: left;
+}
+
+.card:focus-visible .card-interno {
+  outline: 3px solid var(--destaque);
+  outline-offset: 3px;
+  border-radius: var(--raio);
+}
+
+.card-interno {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  transform-style: preserve-3d;
+  transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1);
+  border-radius: var(--raio);
+  box-shadow: var(--sombra);
+}
+
+/* Vira quando o card recebe a classe .virado (clique/toque) */
+.card.virado .card-interno {
+  transform: rotateY(180deg);
+}
+
+.face {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: var(--raio);
+  overflow: hidden;
+}
+
+/* ---- Frente: pôster ---- */
+.frente {
+  background: var(--card-2);
+}
+
+.frente img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Fallback quando não há imagem */
+.poster-fallback {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px;
+  text-align: center;
+  background: linear-gradient(160deg, var(--card-2), var(--card));
+  color: var(--texto-suave);
+}
+.poster-fallback .emoji { font-size: 2.4rem; }
+.poster-fallback .nome { font-weight: 600; color: var(--texto); }
+
+/* Faixa inferior com título + ano sobre o pôster */
+.frente .legenda {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  padding: 36px 14px 14px;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.85));
+}
+.frente .legenda .t {
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.2;
+}
+.frente .legenda .a {
+  color: var(--texto-suave);
+  font-size: 0.82rem;
+}
+
+.dica-virar {
+  position: absolute;
+  top: 10px; right: 10px;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  font-size: 0.72rem;
+  padding: 4px 9px;
+  border-radius: 999px;
+  backdrop-filter: blur(4px);
+}
+
+/* ---- Verso: sinopse + piadas ---- */
+.verso {
+  transform: rotateY(180deg);
+  background: linear-gradient(160deg, var(--card-2), var(--card));
+  padding: 18px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: auto;
+}
+
+.verso h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.verso .meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  color: var(--texto-suave);
+  font-size: 0.8rem;
+}
+
+.estrelas { color: var(--estrela); letter-spacing: 1px; white-space: nowrap; }
+.estrelas .vazia { color: rgba(255, 255, 255, 0.18); }
+
+.verso .sinopse {
+  font-size: 0.86rem;
+  color: var(--texto-suave);
+}
+
+.verso .piadas-titulo {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--destaque);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 2px;
+}
+
+.verso ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.verso ul li {
+  font-size: 0.84rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-left: 3px solid var(--destaque-2);
+  padding: 7px 10px;
+  border-radius: 8px;
+}
+
+/* -------- Estado vazio e rodapé -------- */
+.vazio {
+  text-align: center;
+  color: var(--texto-suave);
+  padding: 40px 20px;
+  font-size: 1.05rem;
+}
+
+.rodape {
+  text-align: center;
+  color: var(--texto-suave);
+  font-size: 0.82rem;
+  padding: 10px 20px 40px;
+}
+
+/* -------- Acessibilidade: reduzir movimento -------- */
+@media (prefers-reduced-motion: reduce) {
+  .card-interno { transition: none; }
+}
+
+/* -------- Scrollbar do verso -------- */
+.verso::-webkit-scrollbar { width: 6px; }
+.verso::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 999px;
+}

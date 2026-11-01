@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nosso Acervo de Filmes 🎬</title>
+  <meta name="description" content="Um álbum de lembranças dos filmes que já assistimos juntos." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="topo">
+    <h1>Nosso Acervo de Filmes <span aria-hidden="true">🎬❤️</span></h1>
+    <p class="subtitulo">Um álbum das lembranças que a gente viu juntos.</p>
+
+    <div class="controles">
+      <input
+        type="search"
+        id="busca"
+        class="busca"
+        placeholder="Buscar por título ou piada..."
+        aria-label="Buscar filme"
+      />
+      <select id="ordenar" class="ordenar" aria-label="Ordenar filmes">
+        <option value="data-desc">Mais recentes primeiro</option>
+        <option value="data-asc">Mais antigos primeiro</option>
+        <option value="nota-desc">Melhor avaliados</option>
+        <option value="titulo-asc">Título (A-Z)</option>
+      </select>
+    </div>
+
+    <p class="stats" id="stats"></p>
+  </header>
+
+  <main>
+    <section class="grade" id="grade" aria-live="polite"></section>
+    <p class="vazio" id="vazio" hidden>Nenhum filme encontrado por aqui. 🍿</p>
+  </main>
+
+  <footer class="rodape">
+    <p>Feito com carinho • Toque ou clique num card pra ver a sinopse e as piadinhas</p>
+  </footer>
+
+  <!-- Dica: a dedução de pôster usa a API OMDb. Ponha sua chave em app.js. -->
+  <script src="filmes.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
