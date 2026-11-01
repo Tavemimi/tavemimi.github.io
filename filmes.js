@@ -268,12 +268,12 @@ const FILMES = [
 
   {
     titulo: "Possuída no Deserto",
-    tituloBusca: "",
-    ano: 2024,
-    posterUrl: "",
+    tituloBusca: "Killing Faith",
+    ano: 2025,
+    posterUrl: "https://m.media-amazon.com/images/M/MV5BMjc3Yzk4NzctMjFkNy00YmZhLTg3YmUtM2ZkZmQ4MmQ4MWRjXkEyXkFqcGc@._V1_QL75_UY562_CR0,0,380,562_.jpg",
     data: "2025-05-11",
     nota: 3.5,
-    sinopse: "Um terror sobrenatural ambientado em meio ao isolamento do deserto. (Confirme qual é este filme e ajuste título/ano/sinopse.)",
+    sinopse: "Um terror sobrenatural ambientado no isolamento do deserto, onde a fé de uma mulher é posta à prova por forças malignas.",
     piadas: [
       "(exemplo) Trocar pela nossa lembrança deste filme."
     ]
@@ -281,12 +281,12 @@ const FILMES = [
 
   {
     titulo: "O Nascimento do Mal",
-    tituloBusca: "",
-    ano: 2023,
-    posterUrl: "",
+    tituloBusca: "Bed Rest",
+    ano: 2022,
+    posterUrl: "https://m.media-amazon.com/images/M/MV5BYzYzY2Q3YTAtYWQ5MS00ZjIxLTllNzEtZWMzOTc2MWZjODM3XkEyXkFqcGc@._V1_QL75_UX380_CR0,4,380,562_.jpg",
     data: "2025-05-18",
     nota: 3.5,
-    sinopse: "Uma história de horror sobre a origem de uma força maligna. (Existe mais de um filme com este nome — confirme qual é.)",
+    sinopse: "Uma gestante em repouso numa casa nova passa a ser atormentada por presenças sobrenaturais enquanto tenta proteger o bebê.",
     piadas: [
       "(exemplo) Trocar pela nossa lembrança deste filme."
     ]
@@ -359,12 +359,12 @@ const FILMES = [
 
   {
     titulo: "SOCORRO!",
-    tituloBusca: "",
-    ano: 2024,
-    posterUrl: "",
+    tituloBusca: "Send Help",
+    ano: 2026,
+    posterUrl: "https://m.media-amazon.com/images/M/MV5BOTgxOWY5NTMtYjdiNi00NTIyLTkwMTQtMWNjM2IzYTU0ODgyXkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
     data: "2025-07-06",
     nota: 3.5,
-    sinopse: "Uma comédia de confusões. (Confirme o filme exato e ajuste título/ano/sinopse.)",
+    sinopse: "Suspense de comédia e terror dirigido por Sam Raimi: dois colegas de trabalho ficam presos numa ilha e a convivência vira um pesadelo.",
     piadas: [
       "(exemplo) Trocar pela nossa lembrança deste filme."
     ]
