@@ -185,6 +185,8 @@ assets/
     app.js            (filmes)
     poemas-app.js
     fotos-app.js
+    loader.js         (carrega os dados sempre atualizados — anti-cache)
+    romance.js        (os corações flutuantes de fundo)
 dados/              → ⭐ OS ARQUIVOS QUE VOCÊ EDITA NO DIA A DIA
   filmes.js
   poemas.js
@@ -209,9 +211,11 @@ alterar os valores ali.
 Pode. Deixe `data: ""` e `nota: 0` que o card continua funcionando normalmente.
 
 **Editei algo mas o site mostra a versão antiga (cache).**
-As páginas usam `?v=DATA` no final dos links de CSS e dos dados (ex:
-`style.css?v=2026-11-01`). Quando você mudar `filmes.js`, `poemas.js`, `fotos.js`
-ou o visual, troque esse número de versão nos arquivos `.html` (use a data do dia,
-ex: `?v=2026-11-15`). Isso faz todos os dispositivos baixarem a versão nova em vez
-da guardada em cache. Dá pra trocar todos de uma vez com "localizar e substituir"
-no editor (procure por `?v=2026-11-01`).
+Não precisa fazer nada! O site tem **cache-busting automático**: o `assets/js/loader.js`
+carrega os dados e o CSS sempre na versão mais recente a cada visita. É só editar,
+dar commit/push, e a mudança aparece em todos os dispositivos.
+
+**Quero menos (ou nenhuma) animação.**
+As animações de romance ficam em `assets/css/style.css` (seção "ANIMAÇÕES DE ROMANCE")
+e os corações flutuantes em `assets/js/romance.js` (ajuste a constante `QUANTIDADE`).
+Quem tem o sistema configurado pra "reduzir movimento" já vê a versão sem animação.

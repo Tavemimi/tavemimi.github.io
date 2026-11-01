@@ -63,8 +63,12 @@
     <p>Feito com carinho • Toque ou clique num card pra ver a sinopse e as piadinhas</p>
   </footer>
 
+  <script src="../assets/js/romance.js"></script>
+
   <!-- Dica: a busca de pôster usa a API OMDb. A chave fica em assets/js/app.js. -->
-  <script src="../dados/filmes.js?v=2026-11-01"></script>
-  <script src="../assets/js/app.js?v=2026-11-01"></script>
+  <!-- O loader carrega os dados + a lógica sempre na versão mais recente (cache-busting automático). -->
+  <script src="../assets/js/loader.js"
+          data-dados="../dados/filmes.js"
+          data-app="../assets/js/app.js"></script>
 </body>
 </html>

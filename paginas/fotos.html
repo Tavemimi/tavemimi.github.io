@@ -16,7 +16,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../assets/css/style.css?v=2026-11-01" />
+  <!-- CSS com cache-busting automático -->
+  <script>document.write('<link rel="stylesheet" href="../assets/css/style.css?v=' + Date.now() + '">');</script>
+  <noscript><link rel="stylesheet" href="../assets/css/style.css" /></noscript>
 </head>
 <body>
 
@@ -49,7 +51,11 @@
     <p class="lb-legenda" id="lb-legenda"></p>
   </div>
 
-  <script src="../dados/fotos.js?v=2026-11-01"></script>
-  <script src="../assets/js/fotos-app.js?v=2026-11-01"></script>
+  <script src="../assets/js/romance.js"></script>
+
+  <!-- O loader carrega os dados + a lógica sempre na versão mais recente (cache-busting automático). -->
+  <script src="../assets/js/loader.js"
+          data-dados="../dados/fotos.js"
+          data-app="../assets/js/fotos-app.js"></script>
 </body>
 </html>
