@@ -447,6 +447,21 @@ const FILMES = [
       "Só tem puta nesse reino kkkk",
       "O Príncipe Encantado queima a rosca, usa batom de cereja... me fala se não é um seca buceta"
     ]
+  },
+
+  {
+    titulo: "Shrek Terceiro",
+    tituloBusca: "Shrek the Third",
+    ano: 2007,
+    posterUrl: "https://image.tmdb.org/t/p/w500/abw1mIJIjG9X3xSEffE9siLcOkN.jpg",
+    data: "2026-11-02",
+    nota: 5,
+    sinopse: "Com a morte do Rei, Shrek precisa encontrar o herdeiro do trono de Tão Tão Distante enquanto o Príncipe Encantado arma para tomar o reino.",
+    piadas: [
+      "Fumando incenso na escola kkkk",
+      "O príncipe continua afeminado",
+      "O Shrek querendo comprar cigarro"
+    ]
   }
 
 ];
