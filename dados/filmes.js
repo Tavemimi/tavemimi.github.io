@@ -485,7 +485,7 @@ const FILMES = [
     ano: 2007,
     posterUrl: "https://image.tmdb.org/t/p/w500/puW6ynGLcCowqiYvhPhdbNH8Zzj.jpg",
     data: "2026-11-02",
-    nota: 4,
+    nota: 2,
     sinopse: "Uma abelha recém-formada decide processar a humanidade por explorar o mel, e sua amizade com uma florista vira caso de tribunal.",
     piadas: [
       "A XERECA TÁ MELANDO PARA A ABELHA KKKKKKKK",
