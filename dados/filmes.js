@@ -462,6 +462,38 @@ const FILMES = [
       "O príncipe continua afeminado",
       "O Shrek querendo comprar cigarro"
     ]
+  },
+
+  {
+    titulo: "Shrek Para Sempre",
+    tituloBusca: "Shrek Forever After",
+    ano: 2010,
+    posterUrl: "https://image.tmdb.org/t/p/w500/iFXVU0ni6YWgQNSPkoGO1Tk5L3g.jpg",
+    data: "2026-11-02",
+    nota: 5,
+    sinopse: "Cansado da vida domesticada, Shrek faz um pacto com Rumpelstiltskin e acaba num mundo paralelo onde nunca existiu — e precisa reconquistar tudo.",
+    piadas: [
+      "Morreu inocente e virou ceia de natal kkkkk",
+      "Só dá valor quando perde",
+      "Sempre leia a letra miúda"
+    ]
+  },
+
+  {
+    titulo: "Bee Movie",
+    tituloBusca: "Bee Movie",
+    ano: 2007,
+    posterUrl: "https://image.tmdb.org/t/p/w500/puW6ynGLcCowqiYvhPhdbNH8Zzj.jpg",
+    data: "2026-11-02",
+    nota: 5,
+    sinopse: "Uma abelha recém-formada decide processar a humanidade por explorar o mel, e sua amizade com uma florista vira caso de tribunal.",
+    piadas: [
+      "A XERECA TÁ MELANDO PARA A ABELHA KKKKKKKK",
+      "Casal mais sem personalidade do universo",
+      "Tanta coisa para querer na vida, a mina quer vender FLOR",
+      "O protagonista cursa Letras na UFMG",
+      "Ideias estúpidas têm consequências inusitadas"
+    ]
   }
 
 ];
