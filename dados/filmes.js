@@ -469,7 +469,7 @@ const FILMES = [
     tituloBusca: "Shrek Forever After",
     ano: 2010,
     posterUrl: "https://image.tmdb.org/t/p/w500/iFXVU0ni6YWgQNSPkoGO1Tk5L3g.jpg",
-    data: "2026-11-02",
+    data: "2026-11-06",
     nota: 5,
     sinopse: "Cansado da vida domesticada, Shrek faz um pacto com Rumpelstiltskin e acaba num mundo paralelo onde nunca existiu — e precisa reconquistar tudo.",
     piadas: [
@@ -484,7 +484,7 @@ const FILMES = [
     tituloBusca: "Bee Movie",
     ano: 2007,
     posterUrl: "https://image.tmdb.org/t/p/w500/puW6ynGLcCowqiYvhPhdbNH8Zzj.jpg",
-    data: "2026-11-02",
+    data: "2026-11-06",
     nota: 2,
     sinopse: "Uma abelha recém-formada decide processar a humanidade por explorar o mel, e sua amizade com uma florista vira caso de tribunal.",
     piadas: [
