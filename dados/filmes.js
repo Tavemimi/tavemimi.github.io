@@ -494,6 +494,45 @@ const FILMES = [
       "O protagonista cursa Letras na UFMG",
       "Ideias estúpidas têm consequências inusitadas"
     ]
+  },
+
+  {
+    titulo: "Sing! Quem Canta Seus Males Espanta",
+    tituloBusca: "Sing",
+    ano: 2016,
+    posterUrl: "https://image.tmdb.org/t/p/w500/rkPf3AH4DPJC1T26T8CwAjBHHvc.jpg",
+    data: "2026-11-11",
+    nota: 4,
+    sinopse: "Um coala dono de teatro à beira da falência organiza um concurso de canto e reúne animais sonhadores que querem mudar de vida pela música.",
+    piadas: [
+      "Primeiro Astronauta Coala? Naaaaaoooo, dono de TEATRO, é ISSO que eu quero",
+      "Coala do PIX - 171",
+      "O pai do cara trabalhou 30 anos e o filho não soube cuidar",
+      "\"Sua calça, bota na sacola\"",
+      "Por que os bandidos são logos os macacos pretos?",
+      "Porcaria Engenharia"
+    ]
+  },
+
+  {
+    titulo: "Madagascar",
+    tituloBusca: "Madagascar",
+    ano: 2005,
+    posterUrl: "https://image.tmdb.org/t/p/w500/9OFYnKQBdSfoSunwkImoTtYo9S9.jpg",
+    data: "2026-11-12",
+    nota: 5,
+    sinopse: "Quatro animais do zoológico de Nova York fogem, vão parar na ilha de Madagascar e descobrem como é a vida selvagem de verdade.",
+    piadas: [
+      "\"A natureza não existe, ela pode te machucar\"",
+      "Alex é um péssimo amigo e complexo",
+      "Dublagem da Glória é tensa",
+      "PLANETA DOS MACACOS",
+      "Mamífero Superior, você sabe ler?",
+      "Trouxe uma balinha?",
+      "\"RELAÇÃO CONSANGUÍNEA\", DUBLAGEM DO CARAI KKKKKKK",
+      "Ovo morder ocê",
+      "Quem a foda é o gatão meu casa"
+    ]
   }
 
 ];
