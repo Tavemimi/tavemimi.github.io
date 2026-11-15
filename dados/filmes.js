@@ -27,6 +27,8 @@
                         Deixe "" se ainda não quiser preencher.
    nota        (número) Avaliação de 0 a 5 (aceita meio: 3.5, 4.5, etc.).
                         Deixe 0 enquanto não avaliarem.
+                        Filmes que vocês ainda não avaliaram usam a nota do IMDb
+                        convertida pra 5 estrelas (nota ÷ 2, em passos de 0,5).
    sinopse     (texto)  Uma sinopse curta do filme.
    piadas      (lista)  Piadinhas / lembranças internas de vocês.
                         Deixe [] (vazio) enquanto não tiverem piadinhas.
@@ -42,7 +44,7 @@ const FILMES = [
     ordem: 1,
     posterUrl: "https://m.media-amazon.com/images/M/MV5BMTg5NzY0MzA2MV5BMl5BanBnXkFtZTYwNDc3NTc2._V1_QL75_UX380_CR0,0,380,562_.jpg",
     data: "2026-08-15",
-    nota: 4.5,
+    nota: 3.5,
     sinopse: "Um carro de corrida arrogante se perde na cidadezinha de Radiator Springs e aprende que amizade vale mais que troféus.",
     piadas: [
       "KA-CHOW! O ego do Relâmpago McQueen não cabia nem na pista",
@@ -60,7 +62,7 @@ const FILMES = [
     ordem: 2,
     posterUrl: "https://m.media-amazon.com/images/M/MV5BMTUzNTc3MTU3M15BMl5BanBnXkFtZTcwMzIxNTc3NA@@._V1_QL75_UX380_CR0,0,380,562_.jpg",
     data: "2026-08-15",
-    nota: 4,
+    nota: 3,
     sinopse: "Relâmpago McQueen e o Mate vão parar no meio de uma trama de espionagem internacional durante uma corrida mundial.",
     piadas: [
       "O Mate virou espião sem querer e se deu melhor que muito agente de verdade",
@@ -77,7 +79,7 @@ const FILMES = [
     ano: 2008,
     posterUrl: "https://m.media-amazon.com/images/M/MV5BMjExMTg5OTU0NF5BMl5BanBnXkFtZTcwMjMxMzMzMw@@._V1_QL75_UX380_CR0,0,380,562_.jpg",
     data: "2026-08-15",
-    nota: 5,
+    nota: 4,
     sinopse: "Um robozinho que limpa a Terra abandonada se apaixona por outra robô e acaba embarcando numa aventura que pode salvar a humanidade.",
     piadas: [
       "O robozinho mais fofo do universo e o melhor amigo dele é uma barata. Respeito",
@@ -93,7 +95,7 @@ const FILMES = [
     ano: 2023,
     posterUrl: "https://m.media-amazon.com/images/M/MV5BNjU2MjE1OGItZjdmYS00ZmIyLTljNjYtOWI5ZGRkZjM4NDEwXkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
     data: "2026-08-15",
-    nota: 4.5,
+    nota: 3.5,
     sinopse: "Numa cidade onde fogo, água, terra e ar convivem, uma jovem de fogo e um rapaz de água descobrem o quanto têm em comum.",
     piadas: [
       "Fogo e água se apaixonando: relacionamento que dá vapor kkkk",
@@ -109,7 +111,7 @@ const FILMES = [
     ano: 2025,
     posterUrl: "https://m.media-amazon.com/images/M/MV5BYjg1Mjc3MjQtMTZjNy00YWVlLWFhMWEtMWI3ZTgxYjJmNmRlXkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
     data: "2026-08-15",
-    nota: 4.5,
+    nota: 3.5,
     sinopse: "Judy e Nick, agora detetives, seguem a trilha de um réptil misterioso que chega à cidade e vira a metrópole dos mamíferos de cabeça para baixo.",
     piadas: [
       "Judy e Nick são a dupla de detetives que a gente queria ter no trabalho",
@@ -139,7 +141,7 @@ const FILMES = [
     ano: 2022,
     posterUrl: "https://m.media-amazon.com/images/M/MV5BNDAzNmYwZjgtNDc3YS00ZDMyLTk0MjktMTg4MGNmNGU3MjlhXkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
     data: "2026-08-15",
-    nota: 4,
+    nota: 3.5,
     sinopse: "Um homem com transtorno dissociativo descobre que compartilha o corpo com um justiceiro ligado a um deus egípcio.",
     piadas: [
       "Steven Grant só queria trabalhar na loja de souvenirs do museu e acabou virando herói por acidente",
@@ -155,7 +157,7 @@ const FILMES = [
     ano: 2010,
     posterUrl: "https://m.media-amazon.com/images/M/MV5BMTY3NjY0MTQ0Nl5BMl5BanBnXkFtZTcwMzQ2MTc0Mw@@._V1_QL75_UX380_CR0,0,380,562_.jpg",
     data: "2026-08-22",
-    nota: 4.5,
+    nota: 4,
     sinopse: "Um vilão genial planeja roubar a Lua, mas tem seus planos bagunçados ao adotar três meninas órfãs.",
     piadas: [
       "Planejou roubar a Lua e acabou roubado por três meninas. Amor que desarma",
@@ -171,7 +173,7 @@ const FILMES = [
     ano: 2007,
     posterUrl: "https://m.media-amazon.com/images/M/MV5BMjE4NDE3NzcwM15BMl5BanBnXkFtZTcwMTI0ODYzMw@@._V1_QL75_UX380_CR0,1,380,562_.jpg",
     data: "2026-08-22",
-    nota: 4,
+    nota: 3.5,
     sinopse: "Um documentário cômico acompanha pinguins surfistas numa competição mundial de surfe.",
     piadas: [
       "Pinguim surfista em documentário e ainda tem rivalidade de campeonato",
@@ -187,7 +189,7 @@ const FILMES = [
     ano: 2023,
     posterUrl: "https://m.media-amazon.com/images/M/MV5BM2Y1N2ZhNjctYjVhZC00MDg2LWFhNTItMzI3ZjAwZDhjYmFiXkEyXkFqcGc@._V1_QL75_UY562_CR35,0,380,562_.jpg",
     data: "2026-08-22",
-    nota: 4.5,
+    nota: 3.5,
     sinopse: "A história de como o jovem e sonhador Willy Wonka se tornou o maior chocolateiro do mundo.",
     piadas: [
       "O Wonka assinou contrato sem ler e pagou caro. Quem nunca? (veja: letra miúda)",
@@ -203,7 +205,7 @@ const FILMES = [
     ano: 2021,
     posterUrl: "https://m.media-amazon.com/images/M/MV5BMWU3Y2NlZmEtMjJjNS00ZWMxLWE1MzctYWYyMjMzMDdkNTE4XkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
     data: "2026-08-22",
-    nota: 4,
+    nota: 3.5,
     sinopse: "Um grupo de vilões presos recebe uma missão quase impossível numa ilha remota em troca da liberdade.",
     piadas: [
       "Peacemaker ama tanto a paz que mata todo mundo pra conseguir. Lógica impecável",
@@ -219,7 +221,7 @@ const FILMES = [
     ano: 2005,
     posterUrl: "https://m.media-amazon.com/images/M/MV5BMTk1MTY1NjU4MF5BMl5BanBnXkFtZTcwNjIzMTEzMw@@._V1_QL75_UY562_CR0,0,380,562_.jpg",
     data: "2026-08-24",
-    nota: 4.5,
+    nota: 3.5,
     sinopse: "Um rapaz tímido ensaia os votos na floresta e acaba casado por engano com uma noiva do mundo dos mortos.",
     piadas: [
       "O mundo dos mortos é bem mais animado que o dos vivos. Faz sentido",
@@ -235,7 +237,7 @@ const FILMES = [
     ano: 2021,
     posterUrl: "https://m.media-amazon.com/images/M/MV5BYjA2NzhlMDItNWRmZC00MzRjLWE3ZjAtZjBlZDAwOWY2ODdjXkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
     data: "2026-09-15",
-    nota: 5,
+    nota: 4.5,
     sinopse: "Duas irmãs se veem em lados opostos de um conflito entre duas cidades, em meio à ascensão de tecnologia e magia. (É série, mas entrou no acervo.)",
     piadas: [
       "Arcane: desenho animado que faz a gente esquecer que é desenho",
@@ -253,7 +255,7 @@ const FILMES = [
     ordem: 1,
     posterUrl: "https://m.media-amazon.com/images/M/MV5BMjM2MWU5ZDEtNDZlZC00ZmQ2LThiOTEtMmZkMzAxMmI5MGIyXkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
     data: "2026-10-09",
-    nota: 5,
+    nota: 3.5,
     sinopse: "Um imperador mimado é transformado em lhama e precisa da ajuda de um camponês de bom coração para recuperar o trono.",
     piadas: [
       "POR QUE A GENTE TEM ESSA ALAVANCA, KRONK?",
@@ -271,7 +273,7 @@ const FILMES = [
     ordem: 2,
     posterUrl: "https://image.tmdb.org/t/p/w500/7g5Y8bLhThN91pqhJs7KVylwIXi.jpg",
     data: "2026-10-09",
-    nota: 4,
+    nota: 3,
     sinopse: "O desastrado Kronk tenta provar ao pai que fez algo da vida, aprontando muita confusão pelo caminho.",
     piadas: [
       "O Kronk fingindo ser bem-sucedido pro pai. Todo mundo já inflou o currículo uma vez",
@@ -286,7 +288,7 @@ const FILMES = [
     ano: 2026,
     posterUrl: "https://m.media-amazon.com/images/M/MV5BZTI1YTBiNmEtYWUxZi00YzFkLWIzNjMtMmZjMmY2NzM0ZWMzXkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
     data: "2026-10-09",
-    nota: 4.5,
+    nota: 3.5,
     sinopse: "Buzz, Woody, Jessie e o resto da turma enfrentam uma nova ameaça à diversão: a tecnologia.",
     piadas: [
       "Os brinquedos contra a tecnologia: só falta o Woody enfrentar um tablet kkkk",
@@ -303,7 +305,7 @@ const FILMES = [
     ordem: 3,
     posterUrl: "https://m.media-amazon.com/images/M/MV5BNThkYWE3OGItNzAyNC00N2U4LThjY2QtMGQwYjZhYTI1MzMwXkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
     data: "2026-10-10",
-    nota: 4,
+    nota: 3,
     sinopse: "Os investigadores Ed e Lorraine Warren enfrentam um caso real em que um acusado de assassinato alega ter sido possuído.",
     piadas: [
       "O cara cometeu um crime e disse que foi o diabo: a defesa mais criativa da história",
@@ -320,7 +322,7 @@ const FILMES = [
     ordem: 4,
     posterUrl: "https://m.media-amazon.com/images/M/MV5BM2VmMzRkYzgtMzg2ZC00OTFkLTkwMTYtNTMxNjM2YzI1MjgyXkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
     data: "2026-10-10",
-    nota: 4,
+    nota: 3,
     sinopse: "Ed e Lorraine Warren assumem um novo caso de horror sobrenatural que os obriga a um confronto final e a encarar seus maiores medos.",
     piadas: [
       "O capítulo final dos Warren: despedida de fantasma com dignidade",
@@ -335,7 +337,7 @@ const FILMES = [
     ano: 2025,
     posterUrl: "https://m.media-amazon.com/images/M/MV5BMjc3Yzk4NzctMjFkNy00YmZhLTg3YmUtM2ZkZmQ4MmQ4MWRjXkEyXkFqcGc@._V1_QL75_UY562_CR0,0,380,562_.jpg",
     data: "2026-10-10",
-    nota: 3.5,
+    nota: 3,
     sinopse: "Em 1859, uma mulher recém-libertada acredita que a filha está possuída, porque tudo que a menina toca morre, e convence um médico viúvo a levá-la numa viagem em busca de um curandeiro distante.",
     piadas: [
       "Tudo que a menina toca morre: a pior habilidade pra ter em casa",
@@ -349,7 +351,7 @@ const FILMES = [
     ano: 2022,
     posterUrl: "https://m.media-amazon.com/images/M/MV5BYzYzY2Q3YTAtYWQ5MS00ZjIxLTllNzEtZWMzOTc2MWZjODM3XkEyXkFqcGc@._V1_QL75_UX380_CR0,4,380,562_.jpg",
     data: "2026-10-11",
-    nota: 3.5,
+    nota: 2.5,
     sinopse: "Uma gestante em repouso numa casa nova passa a ser atormentada por presenças sobrenaturais enquanto tenta proteger o bebê.",
     piadas: [
       "Repouso absoluto virou terror: grávida precisa de cuidado e menos fantasma",
@@ -366,7 +368,7 @@ const FILMES = [
     ordem: 1,
     posterUrl: "https://m.media-amazon.com/images/M/MV5BMDBlYzU2OGMtOGJjNi00ZGZjLWIwNjMtYzdiZjkwYWNjZDljXkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
     data: "2026-10-19",
-    nota: 4.5,
+    nota: 4,
     sinopse: "Um mamute, uma preguiça e um tigre-dentes-de-sabre se unem para devolver um bebê humano à sua família durante a era glacial.",
     piadas: [
       "O Scrat só queria a noz e já era o personagem mais famoso do filme",
@@ -384,7 +386,7 @@ const FILMES = [
     ordem: 2,
     posterUrl: "https://m.media-amazon.com/images/M/MV5BMjAwODg3OTAxMl5BMl5BanBnXkFtZTcwMjg2NjYyMw@@._V1_QL75_UX380_CR0,0,380,562_.jpg",
     data: "2026-10-19",
-    nota: 4,
+    nota: 3.5,
     sinopse: "O degelo ameaça o vale e a turma precisa migrar antes que tudo vire água, enquanto Manny procura outros mamutes.",
     piadas: [
       "A Ellie acha que é gambá e ainda assim fica com o Manny: melhor casal pré-histórico",
@@ -402,7 +404,7 @@ const FILMES = [
     ordem: 3,
     posterUrl: "https://m.media-amazon.com/images/M/MV5BZWJjZDYwMjgtZDZiMy00YzcyLThjN2YtYjI1ZDQ2ZDJkOTVmXkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
     data: "2026-10-21",
-    nota: 4,
+    nota: 3.5,
     sinopse: "A turma descobre um mundo subterrâneo de dinossauros ao resgatar Sid, que adotou três ovos.",
     piadas: [
       "O Sid adota três ovos de dinossauro: a maior irresponsabilidade parental de todas",
@@ -437,7 +439,7 @@ const FILMES = [
     ordem: 5,
     posterUrl: "https://m.media-amazon.com/images/M/MV5BZmExOGMxNzMtYjc3MC00OWU5LTg5OTAtNmRhNzBkYzk2ZGE1XkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
     data: "2026-10-24",
-    nota: 3.5,
+    nota: 3,
     sinopse: "A perseguição de Scrat pela noz desencadeia eventos cósmicos que ameaçam o mundo da turma.",
     piadas: [
       "O Scrat foi parar no espaço por causa de uma noz e ainda ameaçou o planeta",
@@ -467,7 +469,7 @@ const FILMES = [
     ano: 2006,
     posterUrl: "https://image.tmdb.org/t/p/w500/9bA11rxTYfwU3ht7rNPJTpocyCr.jpg",
     data: "2026-10-24",
-    nota: 3,
+    nota: 0.5,
     sinopse: "Animação da Video Brinquedo sobre carrinhos de corrida (não confundir com 'Carros', da Disney/Pixar).",
     piadas: [
       "Rodópolis: a cidade onde o carro pensa e fala como gente e todo mundo é doido por corrida",
@@ -482,7 +484,7 @@ const FILMES = [
     ano: 2002,
     posterUrl: "https://image.tmdb.org/t/p/w500/oV6q3SbgVjRD5Dhzo3lYx7viqUQ.jpg",
     data: "2026-10-24",
-    nota: 4,
+    nota: 3.5,
     sinopse: "No Dia das Bruxas, os vilões da Disney tomam a casa do Mickey para uma noite cheia de sustos e diversão.",
     piadas: [
       "Os vilões da Disney invadindo a casa do Mickey: o crossover mais caótico da infância",
@@ -497,7 +499,7 @@ const FILMES = [
     ano: 1998,
     posterUrl: "https://m.media-amazon.com/images/M/MV5BNGI3Mjc1ZjUtYTJhYS00NjBiLTgyYjctODU5NTNlMWJiYjYzXkEyXkFqcGc@._V1_QL75_UX380_CR0,13,380,562_.jpg",
     data: "2026-10-24",
-    nota: 4,
+    nota: 3.5,
     sinopse: "Uma formiga atrapalhada recruta um grupo de insetos de circo achando que são guerreiros para salvar o formigueiro dos gafanhotos.",
     piadas: [
       "O Flik foi contratar guerreiros e voltou com artistas de circo. Currículo não ajuda",
@@ -513,7 +515,7 @@ const FILMES = [
     ano: 2019,
     posterUrl: "https://m.media-amazon.com/images/M/MV5BZDA4ODhlMzctNGRmYi00NmViLTkxZGYtZjRkNGQ5YzYwYWVlXkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
     data: "2026-10-31",
-    nota: 5,
+    nota: 4,
     sinopse: "Um carteiro preguiçoso enviado a uma vila gelada faz amizade com um misterioso fabricante de brinquedos e, sem querer, dá origem à lenda do Papai Noel.",
     piadas: [
       "O carteiro mais preguiçoso do mundo acabou inventando o Natal. Sorte de principiante",
@@ -530,7 +532,7 @@ const FILMES = [
     ordem: 1,
     posterUrl: "https://image.tmdb.org/t/p/w500/wxeqfC221YMptRRdzxlijAh7q8l.jpg",
     data: "2026-10-30",
-    nota: 5,
+    nota: 4,
     sinopse: "Um ogro rabugento parte numa jornada para resgatar uma princesa e recuperar seu pântano, ao lado de um burro tagarela, descobrindo amizade e amor pelo caminho.",
     piadas: [
       "'Ogros são como cebolas': camadas e muito choro",
