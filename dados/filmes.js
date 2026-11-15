@@ -531,7 +531,43 @@ const FILMES = [
       "Trouxe uma balinha?",
       "\"RELAÇÃO CONSANGUÍNEA\", DUBLAGEM DO CARAI KKKKKKK",
       "Ovo morder ocê",
-      "Quem a foda é o gatão meu casa"
+      "Quem a foda é o gatão meu casa",
+      "É o mercado central, é o mercado, e é central"
+    ]
+  },
+
+  {
+    titulo: "Madagascar 2",
+    tituloBusca: "Madagascar: Escape 2 Africa",
+    ano: 2008,
+    posterUrl: "https://image.tmdb.org/t/p/w500/xBOKF6ks8aFtvanyKPRfeZWErm.jpg",
+    data: "2026-11-13",
+    nota: 5,
+    sinopse: "A turma tenta voltar a Nova York num avião improvisado, mas cai na África, onde Alex reencontra a família que ficou pra trás.",
+    piadas: [
+      "Leão afeminado",
+      "Velha do diabo",
+      "Girafa Hipocondríaca",
+      "Licença maternidade para macho?"
+    ]
+  },
+
+  {
+    titulo: "Madagascar 3: Os Procurados",
+    tituloBusca: "Madagascar 3: Europe's Most Wanted",
+    ano: 2012,
+    posterUrl: "https://image.tmdb.org/t/p/w500/bPRvFj9MGeLeqidaTniUf8yQ0PW.jpg",
+    data: "2026-11-14",
+    nota: 5,
+    sinopse: "Em fuga pela Europa, a turma se disfarça de circo itinerante pra escapar da implacável capitã de controle de animais de Monte Carlo.",
+    piadas: [
+      "TIGRE RUSSO KKKKKKKK",
+      "Jaguar tá na maldade",
+      "Leão Marinho calvo",
+      "AFRO CIRCO KKKKKK",
+      "Secaram a guarda ali hein",
+      "Ursa com Down andando de Ducati",
+      "Comprar um avião com ouro? Não, comprar um circo"
     ]
   }
 
