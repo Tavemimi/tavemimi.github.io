@@ -199,10 +199,11 @@ function mostrarFallback(slot, titulo) {
    Filtro + ordenação + render
    ------------------------------------------------------------------ */
 /* Ordena os filmes.
-   Nos modos por data, segue estritamente as datas: em "mais recentes primeiro"
-   o mais novo fica à esquerda e o mais antigo à direita ("mais antigos primeiro"
-   faz o contrário). Se dois filmes foram vistos no mesmo dia, vale a ordem do
-   filmes.js e, dentro de uma saga, o filme de número menor vem antes. */
+   "Mais antigos primeiro" é a ordem cronológica; "mais recentes primeiro" é
+   exatamente o inverso (mais novo à esquerda, mais antigo à direita).
+   Filmes vistos no mesmo dia seguem a ordem em que aparecem no filmes.js
+   (o que está mais abaixo foi visto depois) e, dentro de uma saga, o filme de
+   número menor foi visto antes. */
 function ordenarFilmes(lista, modo) {
   if (modo !== "data-desc" && modo !== "data-asc") {
     return lista.slice().sort((a, b) => {
@@ -214,11 +215,11 @@ function ordenarFilmes(lista, modo) {
     });
   }
 
-  const desc = modo === "data-desc";
+  const sinal = modo === "data-desc" ? -1 : 1;
   const itens = lista.map((f, i) => ({ f, i }));
 
-  /* No empate de data, os filmes da mesma saga ficam lado a lado, na posição
-     do primeiro deles no filmes.js (assim a comparação continua consistente). */
+  /* No mesmo dia, os filmes da mesma saga ficam lado a lado, na posição do
+     primeiro deles no filmes.js (assim a comparação continua consistente). */
   const chaveDoDia = ({ f, i }) => (f.data || "") + "|" + (f.saga || "\u0000" + i);
   const primeiro = new Map();
   itens.forEach((it) => { const k = chaveDoDia(it); if (!primeiro.has(k)) primeiro.set(k, it.i); });
@@ -226,10 +227,12 @@ function ordenarFilmes(lista, modo) {
   itens.sort((x, y) => {
     const dx = x.f.data || "";
     const dy = y.f.data || "";
-    if (dx !== dy) return desc ? dy.localeCompare(dx) : dx.localeCompare(dy);
-    return (primeiro.get(chaveDoDia(x)) - primeiro.get(chaveDoDia(y)))
+    if (dx !== dy) return sinal * dx.localeCompare(dy);
+    return sinal * (
+      (primeiro.get(chaveDoDia(x)) - primeiro.get(chaveDoDia(y)))
       || ((Number(x.f.ordem) || 0) - (Number(y.f.ordem) || 0))
-      || (x.i - y.i);
+      || (x.i - y.i)
+    );
   });
 
   return itens.map((it) => it.f);

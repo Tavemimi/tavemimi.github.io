@@ -19,13 +19,15 @@
    saga        (texto)  OPCIONAL. Nome da série (ex: "Shrek").
    ordem       (número) OPCIONAL. Posição do filme na saga (1, 2, 3...). A lista
                         segue as datas; saga/ordem só desempatam filmes vistos no
-                        mesmo dia (o de número menor vem antes).
+                        mesmo dia (o de número menor foi visto antes).
    posterUrl   (texto)  OPCIONAL. Um link direto de imagem (https://...)
                         OU o caminho de um arquivo que você guarde no projeto.
                         Se preenchido, essa imagem tem PRIORIDADE sobre a
                         busca automática. Deixe "" para o site buscar sozinho.
    data        (texto)  Data em que assistiram juntos. Formato "AAAA-MM-DD".
                         Deixe "" se ainda não quiser preencher.
+                        Filmes do mesmo dia: deixe na ordem em que assistiram
+                        (o primeiro assistido fica mais acima na lista).
    nota        (número) Avaliação de 0 a 5 (aceita meio: 3.5, 4.5, etc.).
                         Deixe 0 enquanto não avaliarem.
                         Filmes que vocês ainda não avaliaram usam a nota do IMDb
