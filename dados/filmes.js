@@ -103,7 +103,7 @@ const FILMES = [
     posterUrl: "https://m.media-amazon.com/images/M/MV5BYjg1Mjc3MjQtMTZjNy00YWVlLWFhMWEtMWI3ZTgxYjJmNmRlXkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
     data: "2026-08-15",
     nota: 4.5,
-    sinopse: "A coelha Judy e a raposa Nick voltam à ativa com um novo mistério para desvendar na metrópole dos animais. (Confira a sinopse oficial quando sair.)",
+    sinopse: "Judy e Nick, agora detetives, seguem a trilha de um réptil misterioso que chega à cidade e vira a metrópole dos mamíferos de cabeça para baixo.",
     piadas: [
       "Judy e Nick são a dupla de detetives que a gente queria ter no trabalho",
       "Um réptil misterioso chega e vira a cidade dos mamíferos de cabeça para baixo. Boa sorte, Judy",
@@ -276,7 +276,7 @@ const FILMES = [
     posterUrl: "https://m.media-amazon.com/images/M/MV5BZTI1YTBiNmEtYWUxZi00YzFkLWIzNjMtMmZjMmY2NzM0ZWMzXkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
     data: "2026-10-09",
     nota: 4.5,
-    sinopse: "Mais uma aventura dos brinquedos mais queridos do cinema. (Confira a sinopse oficial quando sair.)",
+    sinopse: "Buzz, Woody, Jessie e o resto da turma enfrentam uma nova ameaça à diversão: a tecnologia.",
     piadas: [
       "Os brinquedos contra a tecnologia: só falta o Woody enfrentar um tablet kkkk",
       "Quinto filme e o Woody continua fazendo o que faz de melhor: não abandonar ninguém",
@@ -306,7 +306,7 @@ const FILMES = [
     posterUrl: "https://m.media-amazon.com/images/M/MV5BM2VmMzRkYzgtMzg2ZC00OTFkLTkwMTYtNTMxNjM2YzI1MjgyXkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
     data: "2026-10-10",
     nota: 4,
-    sinopse: "O capítulo final da saga dos Warren os coloca diante de seu caso mais assustador. (Confira a sinopse oficial.)",
+    sinopse: "Ed e Lorraine Warren assumem um novo caso de horror sobrenatural que os obriga a um confronto final e a encarar seus maiores medos.",
     piadas: [
       "O capítulo final dos Warren: despedida de fantasma com dignidade",
       "Casal que enfrenta o capeta junto permanece junto",
@@ -321,7 +321,7 @@ const FILMES = [
     posterUrl: "https://m.media-amazon.com/images/M/MV5BMjc3Yzk4NzctMjFkNy00YmZhLTg3YmUtM2ZkZmQ4MmQ4MWRjXkEyXkFqcGc@._V1_QL75_UY562_CR0,0,380,562_.jpg",
     data: "2026-10-10",
     nota: 3.5,
-    sinopse: "Um terror sobrenatural ambientado no isolamento do deserto, onde a fé de uma mulher é posta à prova por forças malignas.",
+    sinopse: "Em 1859, uma mulher recém-libertada acredita que a filha está possuída, porque tudo que a menina toca morre, e convence um médico viúvo a levá-la numa viagem em busca de um curandeiro distante.",
     piadas: [
       "Tudo que a menina toca morre: a pior habilidade pra ter em casa",
       "O médico viúvo topou a viagem: ou é muito corajoso ou muito sem noção"
