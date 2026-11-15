@@ -40,7 +40,10 @@ const FILMES = [
     nota: 4.5,
     sinopse: "Um carro de corrida arrogante se perde na cidadezinha de Radiator Springs e aprende que amizade vale mais que troféus.",
     piadas: [
-      "(exemplo) Trocar pela nossa lembrança deste filme."
+      "KA-CHOW! O ego do Relâmpago McQueen não cabia nem na pista",
+      "Destruiu a rua inteira e ainda teve que consertar de graça. Justiça de Radiator Springs",
+      "Mate dando ré e se achando o mais esperto da estrada",
+      "Tombar trator dormindo: o esporte radical da cidade"
     ]
   },
 
@@ -53,7 +56,10 @@ const FILMES = [
     nota: 4,
     sinopse: "Relâmpago McQueen e o Mate vão parar no meio de uma trama de espionagem internacional durante uma corrida mundial.",
     piadas: [
-      "(exemplo) Trocar pela nossa lembrança deste filme."
+      "O Mate virou espião sem querer e se deu melhor que muito agente de verdade",
+      "O banheiro japonês do Mate: a cena que ninguém esperava ser tão caótica",
+      "Os vilões são os 'limões' e estão revoltados com o mundo dos carros",
+      "McQueen brigando com o melhor amigo porque se envergonhou dele. Ê, rapaz"
     ]
   },
 
@@ -67,7 +73,10 @@ const FILMES = [
     nota: 5,
     sinopse: "Um robozinho que limpa a Terra abandonada se apaixona por outra robô e acaba embarcando numa aventura que pode salvar a humanidade.",
     piadas: [
-      "(exemplo) Trocar pela nossa lembrança deste filme."
+      "O robozinho mais fofo do universo e o melhor amigo dele é uma barata. Respeito",
+      "A EVE destruindo tudo que vê e o WALL-E apaixonado do mesmo jeito",
+      "Os humanos no Axiom nem andam mais, vivem de cadeira flutuante. Espelho do futuro",
+      "O WALL-E mostrou mais sentimento sem falar nada do que muito casal por aí"
     ]
   },
 
@@ -80,7 +89,10 @@ const FILMES = [
     nota: 4.5,
     sinopse: "Numa cidade onde fogo, água, terra e ar convivem, uma jovem de fogo e um rapaz de água descobrem o quanto têm em comum.",
     piadas: [
-      "(exemplo) Trocar pela nossa lembrança deste filme."
+      "Fogo e água se apaixonando: relacionamento que dá vapor kkkk",
+      "O Wade chora por tudo. Literalmente, ele é água",
+      "A Ember perde a paciência e vira fogueira. Todo mundo conhece alguém assim",
+      "Moral do filme: quem ama dá um jeito de se entender"
     ]
   },
 
@@ -93,7 +105,9 @@ const FILMES = [
     nota: 4.5,
     sinopse: "A coelha Judy e a raposa Nick voltam à ativa com um novo mistério para desvendar na metrópole dos animais. (Confira a sinopse oficial quando sair.)",
     piadas: [
-      "(exemplo) Trocar pela nossa lembrança deste filme."
+      "Judy e Nick são a dupla de detetives que a gente queria ter no trabalho",
+      "Um réptil misterioso chega e vira a cidade dos mamíferos de cabeça para baixo. Boa sorte, Judy",
+      "O Nick continua com a lábia de raposa, e funciona"
     ]
   },
 
@@ -106,7 +120,9 @@ const FILMES = [
     nota: 3.5,
     sinopse: "Animação da Pixar: uma jovem tem a consciência transferida para o corpo de um castor robótico e passa a transitar entre o mundo humano e o dos animais.",
     piadas: [
-      "(exemplo) Trocar pela nossa lembrança deste filme."
+      "Passar a mente pra um castor robô é o jeito mais radical de defender a floresta",
+      "Prefeito Jerry querendo abrir uma rodovia no meio da mata. Todo prefeito tem uma dessas ideias",
+      "Rei George, o castor majestoso, é a autoridade que a gente queria ter no condomínio"
     ]
   },
 
@@ -119,7 +135,10 @@ const FILMES = [
     nota: 4,
     sinopse: "Um homem com transtorno dissociativo descobre que compartilha o corpo com um justiceiro ligado a um deus egípcio.",
     piadas: [
-      "(exemplo) Trocar pela nossa lembrança deste filme."
+      "Steven Grant só queria trabalhar na loja de souvenirs do museu e acabou virando herói por acidente",
+      "Quem é o Marc, quem é o Steven, quem é o Jake? Ninguém sabe",
+      "O Khonshu é o chefe mais chato do mundo e não tem como pedir demissão",
+      "A deusa hipopótamo rouba a cena kkkk"
     ]
   },
 
@@ -132,7 +151,10 @@ const FILMES = [
     nota: 4.5,
     sinopse: "Um vilão genial planeja roubar a Lua, mas tem seus planos bagunçados ao adotar três meninas órfãs.",
     piadas: [
-      "(exemplo) Trocar pela nossa lembrança deste filme."
+      "Planejou roubar a Lua e acabou roubado por três meninas. Amor que desarma",
+      "Os Minions falam 'banana' em todos os idiomas e ninguém precisa de legenda",
+      "O Gru é o único vilão que perde tempo lendo historinha pra criança dormir kkkk",
+      "O Vector, de agasalho laranja, é o vilão mais dramático da história"
     ]
   },
 
@@ -145,7 +167,10 @@ const FILMES = [
     nota: 4,
     sinopse: "Um documentário cômico acompanha pinguins surfistas numa competição mundial de surfe.",
     piadas: [
-      "(exemplo) Trocar pela nossa lembrança deste filme."
+      "Pinguim surfista em documentário e ainda tem rivalidade de campeonato",
+      "O Cody queria ser o rei das ondas e descobriu que surfar é se divertir. Mensagem boa",
+      "O Big Z é o mestre zen que todo mundo queria ter",
+      "O Tank Evans, campeão arrogante, é o tipo de gente que a gente adora ver perder"
     ]
   },
 
@@ -158,7 +183,10 @@ const FILMES = [
     nota: 4.5,
     sinopse: "A história de como o jovem e sonhador Willy Wonka se tornou o maior chocolateiro do mundo.",
     piadas: [
-      "(exemplo) Trocar pela nossa lembrança deste filme."
+      "O Wonka assinou contrato sem ler e pagou caro. Quem nunca? (veja: letra miúda)",
+      "O cartel do chocolate é o crime organizado mais docinho da história",
+      "O Oompa Loompa cobrando o cacau dele com cara de poucos amigos",
+      "Chocolate que faz flutuar: único doping aceitável"
     ]
   },
 
@@ -171,7 +199,10 @@ const FILMES = [
     nota: 4,
     sinopse: "Um grupo de vilões presos recebe uma missão quase impossível numa ilha remota em troca da liberdade.",
     piadas: [
-      "(exemplo) Trocar pela nossa lembrança deste filme."
+      "Peacemaker ama tanto a paz que mata todo mundo pra conseguir. Lógica impecável",
+      "O Tubarão-Rei só quer fazer amigo e come gente. Dilema",
+      "O Polka-Dot Man era piada e virou peça-chave",
+      "A Ratcatcher 2 e o ratinho dela: a relação mais bonita do filme"
     ]
   },
 
@@ -184,7 +215,10 @@ const FILMES = [
     nota: 4.5,
     sinopse: "Um rapaz tímido ensaia os votos na floresta e acaba casado por engano com uma noiva do mundo dos mortos.",
     piadas: [
-      "(exemplo) Trocar pela nossa lembrança deste filme."
+      "O mundo dos mortos é bem mais animado que o dos vivos. Faz sentido",
+      "O Victor só ensaiou os votos e já se casou sem querer. Casamento mais rápido do mundo",
+      "O Scraps, o cachorrinho esqueleto, rouba o filme kkkk",
+      "O Barkis é o vilão que dá pra ver de longe"
     ]
   },
 
@@ -197,7 +231,10 @@ const FILMES = [
     nota: 5,
     sinopse: "Duas irmãs se veem em lados opostos de um conflito entre duas cidades, em meio à ascensão de tecnologia e magia. (É série, mas entrou no acervo.)",
     piadas: [
-      "(exemplo) Trocar pela nossa lembrança deste filme."
+      "Arcane: desenho animado que faz a gente esquecer que é desenho",
+      "A Jinx dá medo e dó ao mesmo tempo. Que personagem",
+      "O Silco é o vilão mais elegante e mais bem escrito, chega a dar raiva de gostar",
+      "Piltover e Zaun: duas cidades e uma briga de irmãs"
     ]
   },
 
@@ -210,7 +247,10 @@ const FILMES = [
     nota: 5,
     sinopse: "Um imperador mimado é transformado em lhama e precisa da ajuda de um camponês de bom coração para recuperar o trono.",
     piadas: [
-      "(exemplo) Trocar pela nossa lembrança deste filme."
+      "POR QUE A GENTE TEM ESSA ALAVANCA, KRONK?",
+      "O Kuzco virou lhama e ainda achou que o problema era o mundo",
+      "A Yzma é a vilã mais exagerada e mais carismática da Disney",
+      "Os bolinhos de espinafre do Kronk são a melhor coisa daquele palácio"
     ]
   },
 
@@ -223,7 +263,9 @@ const FILMES = [
     nota: 4,
     sinopse: "O desastrado Kronk tenta provar ao pai que fez algo da vida, aprontando muita confusão pelo caminho.",
     piadas: [
-      "(exemplo) Trocar pela nossa lembrança deste filme."
+      "O Kronk fingindo ser bem-sucedido pro pai. Todo mundo já inflou o currículo uma vez",
+      "A explosão de queijos no restaurante é o caos mais gostoso da Disney",
+      "Yzma ajudando o Kronk a mentir: aliança improvável"
     ]
   },
 
@@ -236,7 +278,9 @@ const FILMES = [
     nota: 4.5,
     sinopse: "Mais uma aventura dos brinquedos mais queridos do cinema. (Confira a sinopse oficial quando sair.)",
     piadas: [
-      "(exemplo) Trocar pela nossa lembrança deste filme."
+      "Os brinquedos contra a tecnologia: só falta o Woody enfrentar um tablet kkkk",
+      "Quinto filme e o Woody continua fazendo o que faz de melhor: não abandonar ninguém",
+      "Toy Story é a prova de que brinquedo também tem crise existencial"
     ]
   },
 
@@ -249,7 +293,9 @@ const FILMES = [
     nota: 4,
     sinopse: "Os investigadores Ed e Lorraine Warren enfrentam um caso real em que um acusado de assassinato alega ter sido possuído.",
     piadas: [
-      "(exemplo) Trocar pela nossa lembrança deste filme."
+      "O cara cometeu um crime e disse que foi o diabo: a defesa mais criativa da história",
+      "Ed e Lorraine: o casal que investiga fantasma junto. Ideal de relacionamento kkkk",
+      "Eu: 'não vou me assustar'. O filme: pula do sofá"
     ]
   },
 
@@ -262,7 +308,9 @@ const FILMES = [
     nota: 4,
     sinopse: "O capítulo final da saga dos Warren os coloca diante de seu caso mais assustador. (Confira a sinopse oficial.)",
     piadas: [
-      "(exemplo) Trocar pela nossa lembrança deste filme."
+      "O capítulo final dos Warren: despedida de fantasma com dignidade",
+      "Casal que enfrenta o capeta junto permanece junto",
+      "Rir de nervoso foi o melhor efeito especial da sessão"
     ]
   },
 
@@ -275,7 +323,8 @@ const FILMES = [
     nota: 3.5,
     sinopse: "Um terror sobrenatural ambientado no isolamento do deserto, onde a fé de uma mulher é posta à prova por forças malignas.",
     piadas: [
-      "(exemplo) Trocar pela nossa lembrança deste filme."
+      "Tudo que a menina toca morre: a pior habilidade pra ter em casa",
+      "O médico viúvo topou a viagem: ou é muito corajoso ou muito sem noção"
     ]
   },
 
@@ -288,7 +337,9 @@ const FILMES = [
     nota: 3.5,
     sinopse: "Uma gestante em repouso numa casa nova passa a ser atormentada por presenças sobrenaturais enquanto tenta proteger o bebê.",
     piadas: [
-      "(exemplo) Trocar pela nossa lembrança deste filme."
+      "Repouso absoluto virou terror: grávida precisa de cuidado e menos fantasma",
+      "Casa nova, marido otimista e um fantasma de brinde",
+      "As pessoas duvidando que ela viu algo. Sempre a mesma história nos filmes de terror"
     ]
   },
 
@@ -301,7 +352,10 @@ const FILMES = [
     nota: 4.5,
     sinopse: "Um mamute, uma preguiça e um tigre-dentes-de-sabre se unem para devolver um bebê humano à sua família durante a era glacial.",
     piadas: [
-      "(exemplo) Trocar pela nossa lembrança deste filme."
+      "O Scrat só queria a noz e já era o personagem mais famoso do filme",
+      "O Sid é preguiça mesmo: vive sendo salvo e ainda reclama",
+      "O Diego era do mal e virou melhor amigo: arco de redenção de tigre",
+      "O Manny não sorri, mas dá a vida pelos outros"
     ]
   },
 
@@ -314,7 +368,10 @@ const FILMES = [
     nota: 4,
     sinopse: "O degelo ameaça o vale e a turma precisa migrar antes que tudo vire água, enquanto Manny procura outros mamutes.",
     piadas: [
-      "(exemplo) Trocar pela nossa lembrança deste filme."
+      "A Ellie acha que é gambá e ainda assim fica com o Manny: melhor casal pré-histórico",
+      "Crash e Eddie, os gambás irmãos, são o caos em pessoa",
+      "Os urubus cantando musical enquanto esperam o jantar. Vilão paciente",
+      "O degelo anunciando o fim do mundo e todo mundo ainda brigando por bobagem"
     ]
   },
 
@@ -327,7 +384,9 @@ const FILMES = [
     nota: 4,
     sinopse: "A turma descobre um mundo subterrâneo de dinossauros ao resgatar Sid, que adotou três ovos.",
     piadas: [
-      "(exemplo) Trocar pela nossa lembrança deste filme."
+      "O Sid adota três ovos de dinossauro: a maior irresponsabilidade parental de todas",
+      "O Buck é o único com plano e o único meio doido",
+      "Scrat e Scratte brigando pela noz: romance que ninguém pediu e todo mundo adorou"
     ]
   },
 
@@ -340,7 +399,10 @@ const FILMES = [
     nota: 3.5,
     sinopse: "A deriva dos continentes separa Manny da família e ele vive uma aventura no mar enfrentando piratas.",
     piadas: [
-      "(exemplo) Trocar pela nossa lembrança deste filme."
+      "O Scrat causando a deriva dos continentes por causa da noz. Mais uma da noz",
+      "O Capitão Gutt, o macaco pirata, é o vilão com mais pose do gelo",
+      "A adolescência da Peaches é um caos igual a de qualquer humano",
+      "A vó do Sid aparecendo pra roubar a cena kkkk"
     ]
   },
 
@@ -353,7 +415,9 @@ const FILMES = [
     nota: 3.5,
     sinopse: "A perseguição de Scrat pela noz desencadeia eventos cósmicos que ameaçam o mundo da turma.",
     piadas: [
-      "(exemplo) Trocar pela nossa lembrança deste filme."
+      "O Scrat foi parar no espaço por causa de uma noz e ainda ameaçou o planeta",
+      "Quinto filme e a franquia continua vivendo de meteoro e crise kkkk",
+      "O Buck continua com a mesma pose enquanto o planeta corre risco"
     ]
   },
 
@@ -366,7 +430,9 @@ const FILMES = [
     nota: 3.5,
     sinopse: "Suspense de comédia e terror dirigido por Sam Raimi: dois colegas de trabalho ficam presos numa ilha e a convivência vira um pesadelo.",
     piadas: [
-      "(exemplo) Trocar pela nossa lembrança deste filme."
+      "Chefe e funcionária que se odeiam presos numa ilha: o RH nunca vai ver isso",
+      "Sobreviver a um acidente de avião só pra continuar a briga de escritório",
+      "Sam Raimi dirigindo: comédia e terror na mesma sessão, como manda o figurino"
     ]
   },
 
@@ -379,7 +445,9 @@ const FILMES = [
     nota: 3,
     sinopse: "Animação da Video Brinquedo sobre carrinhos de corrida (não confundir com 'Carros', da Disney/Pixar).",
     piadas: [
-      "(exemplo) Trocar pela nossa lembrança deste filme."
+      "Rodópolis: a cidade onde o carro pensa e fala como gente e todo mundo é doido por corrida",
+      "Carrinho entregador querendo ser piloto: o sonho de todo mundo que cansou do próprio trabalho",
+      "Não é o 'Carros' da Disney: é Video Brinquedo, e a gente sabe a diferença kkkk"
     ]
   },
 
@@ -392,7 +460,9 @@ const FILMES = [
     nota: 4,
     sinopse: "No Dia das Bruxas, os vilões da Disney tomam a casa do Mickey para uma noite cheia de sustos e diversão.",
     piadas: [
-      "(exemplo) Trocar pela nossa lembrança deste filme."
+      "Os vilões da Disney invadindo a casa do Mickey: o crossover mais caótico da infância",
+      "Vilão fazendo reunião pra tomar o clube. Organização é tudo",
+      "Pateta e Pato Donald no meio da confusão, como sempre"
     ]
   },
 
@@ -405,7 +475,10 @@ const FILMES = [
     nota: 4,
     sinopse: "Uma formiga atrapalhada recruta um grupo de insetos de circo achando que são guerreiros para salvar o formigueiro dos gafanhotos.",
     piadas: [
-      "(exemplo) Trocar pela nossa lembrança deste filme."
+      "O Flik foi contratar guerreiros e voltou com artistas de circo. Currículo não ajuda",
+      "O Francis, a joaninha macho, se ofende quando chamam de 'ela'",
+      "O Heimlich só pensa em comer e sonha em virar borboleta",
+      "O Hopper sabe que a força dele depende do medo dos outros. Lição de vida"
     ]
   },
 
@@ -418,7 +491,9 @@ const FILMES = [
     nota: 5,
     sinopse: "Um carteiro preguiçoso enviado a uma vila gelada faz amizade com um misterioso fabricante de brinquedos e, sem querer, dá origem à lenda do Papai Noel.",
     piadas: [
-      "(exemplo) Trocar pela nossa lembrança deste filme."
+      "O carteiro mais preguiçoso do mundo acabou inventando o Natal. Sorte de principiante",
+      "Duas famílias brigando há gerações e só pararam por causa de presente. Presente é poderoso",
+      "O Klaus é o Papai Noel antes de ser o Papai Noel, e já era de chorar"
     ]
   },
 
@@ -431,7 +506,10 @@ const FILMES = [
     nota: 5,
     sinopse: "Um ogro rabugento parte numa jornada para resgatar uma princesa e recuperar seu pântano, ao lado de um burro tagarela, descobrindo amizade e amor pelo caminho.",
     piadas: [
-      "(exemplo) Trocar pela nossa lembrança deste filme."
+      "'Ogros são como cebolas': camadas e muito choro",
+      "O Burro falando sem parar e o Shrek aguentando. Paciência de pântano",
+      "O Lord Farquaad compensando algo com aquele castelão",
+      "O dragão dando mole pro Burro: casal improvável"
     ]
   },
 
