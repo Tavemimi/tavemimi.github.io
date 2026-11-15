@@ -603,6 +603,27 @@ const FILMES = [
       "01:39:45 - \"SENHOR CRYSTAL, EU TE AMO\"",
       "Nota da Mozinha: A loba é chata e as músicas não combinou"
     ]
+  },
+
+  {
+    titulo: "Super Mario Galaxy: O Filme",
+    tituloBusca: "The Super Mario Galaxy Movie",
+    ano: 2026,
+    posterUrl: "https://image.tmdb.org/t/p/w500/b3WeTp42eJSRuE4UZfyPCOJW4c.jpg",
+    data: "2026-11-15",
+    nota: 5,
+    sinopse: "Depois de salvar o Reino dos Cogumelos, Mario e seus amigos partem numa missão intergaláctica para deter um novo vilão ameaçador.",
+    piadas: [
+      "Luigi é melhor",
+      "Pedra de óculos",
+      "Essa moto ter retrovisor é ofensa",
+      "REFERÊNCIA ATÉ O CU FAZER BICO",
+      "Novamente macaco bandido",
+      "Mozinho: Eu teria matado o Bob",
+      "Raposa de presença",
+      "4 é par",
+      "Estrelinha cabulosíssima"
+    ]
   }
 
 ];
