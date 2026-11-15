@@ -199,10 +199,10 @@ function mostrarFallback(slot, titulo) {
    Filtro + ordenação + render
    ------------------------------------------------------------------ */
 /* Ordena os filmes.
-   Nos modos por data, os filmes de uma mesma saga ficam juntos e sempre na
-   ordem 1, 2, 3... (mesmo que o filme 1 tenha sido visto depois). A saga toda
-   ocupa o lugar do seu filme mais recente (mais recentes primeiro) ou do mais
-   antigo (mais antigos primeiro). Empates mantêm a ordem do filmes.js. */
+   Nos modos por data, segue estritamente as datas: em "mais recentes primeiro"
+   o mais novo fica à esquerda e o mais antigo à direita ("mais antigos primeiro"
+   faz o contrário). Se dois filmes foram vistos no mesmo dia, vale a ordem do
+   filmes.js e, dentro de uma saga, o filme de número menor vem antes. */
 function ordenarFilmes(lista, modo) {
   if (modo !== "data-desc" && modo !== "data-asc") {
     return lista.slice().sort((a, b) => {
@@ -215,31 +215,24 @@ function ordenarFilmes(lista, modo) {
   }
 
   const desc = modo === "data-desc";
-  const grupoDe = (f) => f.saga || "\u0000" + f.titulo;
-  const dataDoGrupo = new Map();
-  const posDoGrupo = new Map();
+  const itens = lista.map((f, i) => ({ f, i }));
 
-  lista.forEach((f, i) => {
-    const g = grupoDe(f);
-    const d = f.data || "";
-    if (!posDoGrupo.has(g)) posDoGrupo.set(g, i);
-    if (!dataDoGrupo.has(g)) { dataDoGrupo.set(g, d); return; }
-    const atual = dataDoGrupo.get(g);
-    dataDoGrupo.set(g, desc ? (d > atual ? d : atual) : (d < atual ? d : atual));
+  /* No empate de data, os filmes da mesma saga ficam lado a lado, na posição
+     do primeiro deles no filmes.js (assim a comparação continua consistente). */
+  const chaveDoDia = ({ f, i }) => (f.data || "") + "|" + (f.saga || "\u0000" + i);
+  const primeiro = new Map();
+  itens.forEach((it) => { const k = chaveDoDia(it); if (!primeiro.has(k)) primeiro.set(k, it.i); });
+
+  itens.sort((x, y) => {
+    const dx = x.f.data || "";
+    const dy = y.f.data || "";
+    if (dx !== dy) return desc ? dy.localeCompare(dx) : dx.localeCompare(dy);
+    return (primeiro.get(chaveDoDia(x)) - primeiro.get(chaveDoDia(y)))
+      || ((Number(x.f.ordem) || 0) - (Number(y.f.ordem) || 0))
+      || (x.i - y.i);
   });
 
-  return lista.slice().sort((a, b) => {
-    const ga = grupoDe(a);
-    const gb = grupoDe(b);
-    if (ga !== gb) {
-      const da = dataDoGrupo.get(ga);
-      const db = dataDoGrupo.get(gb);
-      if (da !== db) return desc ? db.localeCompare(da) : da.localeCompare(db);
-      return posDoGrupo.get(ga) - posDoGrupo.get(gb);
-    }
-    return (Number(a.ordem) || 0) - (Number(b.ordem) || 0)
-      || (a.data || "").localeCompare(b.data || "");
-  });
+  return itens.map((it) => it.f);
 }
 
 function aplicar() {

@@ -16,9 +16,10 @@
                         na URL da página do filme no site imdb.com.
                         Quando preenchido, tem prioridade sobre o tituloBusca.
    ano         (número) Ano de lançamento. Ajuda a achar o pôster certo.
-   saga        (texto)  OPCIONAL. Nome da série (ex: "Shrek"). Filmes da mesma saga
-                        ficam juntos na lista, sempre na ordem 1, 2, 3...
-   ordem       (número) OPCIONAL. Posição do filme dentro da saga (1, 2, 3...).
+   saga        (texto)  OPCIONAL. Nome da série (ex: "Shrek").
+   ordem       (número) OPCIONAL. Posição do filme na saga (1, 2, 3...). A lista
+                        segue as datas; saga/ordem só desempatam filmes vistos no
+                        mesmo dia (o de número menor vem antes).
    posterUrl   (texto)  OPCIONAL. Um link direto de imagem (https://...)
                         OU o caminho de um arquivo que você guarde no projeto.
                         Se preenchido, essa imagem tem PRIORIDADE sobre a
