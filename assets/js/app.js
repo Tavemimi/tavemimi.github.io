@@ -198,6 +198,50 @@ function mostrarFallback(slot, titulo) {
 /* ------------------------------------------------------------------
    Filtro + ordenação + render
    ------------------------------------------------------------------ */
+/* Ordena os filmes.
+   Nos modos por data, os filmes de uma mesma saga ficam juntos e sempre na
+   ordem 1, 2, 3... (mesmo que o filme 1 tenha sido visto depois). A saga toda
+   ocupa o lugar do seu filme mais recente (mais recentes primeiro) ou do mais
+   antigo (mais antigos primeiro). Empates mantêm a ordem do filmes.js. */
+function ordenarFilmes(lista, modo) {
+  if (modo !== "data-desc" && modo !== "data-asc") {
+    return lista.slice().sort((a, b) => {
+      switch (modo) {
+        case "nota-desc": return (Number(b.nota) || 0) - (Number(a.nota) || 0);
+        case "titulo-asc": return (a.titulo || "").localeCompare(b.titulo || "", "pt-BR");
+        default: return 0;
+      }
+    });
+  }
+
+  const desc = modo === "data-desc";
+  const grupoDe = (f) => f.saga || "\u0000" + f.titulo;
+  const dataDoGrupo = new Map();
+  const posDoGrupo = new Map();
+
+  lista.forEach((f, i) => {
+    const g = grupoDe(f);
+    const d = f.data || "";
+    if (!posDoGrupo.has(g)) posDoGrupo.set(g, i);
+    if (!dataDoGrupo.has(g)) { dataDoGrupo.set(g, d); return; }
+    const atual = dataDoGrupo.get(g);
+    dataDoGrupo.set(g, desc ? (d > atual ? d : atual) : (d < atual ? d : atual));
+  });
+
+  return lista.slice().sort((a, b) => {
+    const ga = grupoDe(a);
+    const gb = grupoDe(b);
+    if (ga !== gb) {
+      const da = dataDoGrupo.get(ga);
+      const db = dataDoGrupo.get(gb);
+      if (da !== db) return desc ? db.localeCompare(da) : da.localeCompare(db);
+      return posDoGrupo.get(ga) - posDoGrupo.get(gb);
+    }
+    return (Number(a.ordem) || 0) - (Number(b.ordem) || 0)
+      || (a.data || "").localeCompare(b.data || "");
+  });
+}
+
 function aplicar() {
   const termo = campoBusca.value.trim().toLowerCase();
   const modo = campoOrdenar.value;
@@ -212,15 +256,7 @@ function aplicar() {
     return alvo.includes(termo);
   });
 
-  lista.sort((a, b) => {
-    switch (modo) {
-      case "data-asc":  return (a.data || "").localeCompare(b.data || "");
-      case "data-desc": return (b.data || "").localeCompare(a.data || "");
-      case "nota-desc": return (Number(b.nota) || 0) - (Number(a.nota) || 0);
-      case "titulo-asc": return (a.titulo || "").localeCompare(b.titulo || "", "pt-BR");
-      default: return 0;
-    }
-  });
+  lista = ordenarFilmes(lista, modo);
 
   grade.innerHTML = "";
   lista.forEach((f) => grade.appendChild(criarCard(f)));
