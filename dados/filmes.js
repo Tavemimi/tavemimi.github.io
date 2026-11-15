@@ -702,7 +702,7 @@ const FILMES = [
     saga: "Sing",
     ordem: 2,
     posterUrl: "https://image.tmdb.org/t/p/w500/3GR2a4IGp83ekkKQLB08IcUmc2S.jpg",
-    data: "2026-12-14",
+    data: "2026-11-14",
     nota: 4,
     sinopse: "Buster Moon e sua trupe sonham com o grande palco de Redshore City e precisam convencer um astro do rock recluso a voltar aos holofotes.",
     piadas: [
