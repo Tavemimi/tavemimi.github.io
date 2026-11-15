@@ -569,6 +569,40 @@ const FILMES = [
       "Ursa com Down andando de Ducati",
       "Comprar um avião com ouro? Não, comprar um circo"
     ]
+  },
+
+  {
+    titulo: "Sing 2",
+    tituloBusca: "Sing 2",
+    ano: 2021,
+    posterUrl: "https://image.tmdb.org/t/p/w500/3GR2a4IGp83ekkKQLB08IcUmc2S.jpg",
+    data: "2026-12-14",
+    nota: 4,
+    sinopse: "Buster Moon e sua trupe sonham com o grande palco de Redshore City e precisam convencer um astro do rock recluso a voltar aos holofotes.",
+    piadas: [
+      "DESISTA, DESISTA DOS SEUS SONHOS E MORRA",
+      "Já vi muitas cartadas de roteiro, mas essa é de fuder",
+      "Isso prova que seus contatos valem mais que seus talentos",
+      "ISSO É BUSSINESS BEBÊ KKKKKKK",
+      "GUTHER TEM UM TDAH SINISTRO",
+      "Sra. Kiki James Bond da Silva",
+      "\"Te jogo do prédio\" - Isso não foi uma piada",
+      "Mina mais virgem que azeite extra virgem",
+      "Macaco desengonçado, não sabe dançar",
+      "Encantado de chifres",
+      "Cadê o baiano?",
+      "Fixação científica",
+      "Já ouvi dizer em premonição, mas a LOBA É FIA DA MÃE KKKKKK",
+      "A filha do dono pode tudo meu fi",
+      "Coisas que só acontecem em filme",
+      "REFERÊNCIA DO CARAI SOBRE O PODEROSO CHEFÃO",
+      "A CANTADA DOS GORDIN É OUTRO NÍVEL",
+      "\"Mozinho, se e morrer e você não ficar amargurado assim igual esse leão, é papo da gente não ficar junto no pós-vida\"",
+      "Foda-se caralho, isso é Rock N' Roll",
+      "Calma cachorrinho branco, não quero que se aborreça",
+      "01:39:45 - \"SENHOR CRYSTAL, EU TE AMO\"",
+      "Nota da Mozinha: A loba é chata e as músicas não combinou"
+    ]
   }
 
 ];
