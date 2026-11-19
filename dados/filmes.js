@@ -750,6 +750,30 @@ const FILMES = [
       "4 é par",
       "Estrelinha cabulosíssima"
     ]
+  },
+
+  {
+    titulo: "Kung Fu Panda",
+    tituloBusca: "Kung Fu Panda",
+    saga: "Kung Fu Panda",
+    ordem: 1,
+    ano: 2008,
+    posterUrl: "https://image.tmdb.org/t/p/w500/1YMs3zCt5kICK28RvVgDL1UUtkA.jpg",
+    data: "2026-11-17",
+    nota: 5,
+    sinopse: "Po, um panda que trabalha na loja de macarrão da família, sonha em ser mestre de kung fu e acaba escolhido para cumprir uma antiga profecia e proteger seu povo de um leopardo da neve malvado.",
+    piadas: [
+      "SHOW DE BOLICHE",
+      "UMA FODENDO PENA SALVOU O CARA",
+      "Tai Lung foda, nada a comentar",
+      "Nem se fosse 50k de soldados tankava",
+      "Os 5 furiosos apanhando",
+      "Víbora querendo o Panda",
+      "Panda mostrando seus talentos ocultos",
+      "Tartaruga fia da puta, deslogou do serve e deixou a merda pros meninos KKKKKKK",
+      "Não existe ingrediente secreto.",
+      "Obs: Mozinho disse que sou metade Po e metade Tai Lung"
+    ]
   }
 
 ];
