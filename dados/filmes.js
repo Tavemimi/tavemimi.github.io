@@ -787,7 +787,7 @@ const FILMES = [
     nota: 5,
     sinopse: "Po, agora o Dragão Guerreiro, e os Cinco Furiosos cruzam a China para deter o lorde Shen, que tem uma arma secreta capaz de acabar com o kung fu.",
     piadas: [
-      "Shein psicopata afeminado",
+      "Shen psicopata afeminado",
       "Po sofreu mais que o Tai Lung e não é mal",
       "A cabra vidente avisou tudo e ninguém deu ouvido. Clássico",
       "Pavão com canhão: o cara trocou o kung fu por pólvora e ainda perdeu",
@@ -808,7 +808,7 @@ const FILMES = [
     sinopse: "Ao visitar uma vila secreta com o pai, Po forma um exército de pandas para combater um espírito maligno que ameaça a China.",
     piadas: [
       "Kai um pleno desconhecido",
-      "Kai achando que é o Ginshskam KKKKKKK",
+      "Kai achando que é o Gengis Khan KKKKKKK",
       "Dois pais brigando pra ver quem alimenta o Po: o único que sai ganhando é o Po",
       "Treinamento de panda: come muito e rola morro abaixo",
       "Kai vive de chi dos outros: vilão que só funciona com bateria emprestada",
