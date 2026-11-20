@@ -774,6 +774,46 @@ const FILMES = [
       "Não existe ingrediente secreto.",
       "Obs: Mozinho disse que sou metade Po e metade Tai Lung"
     ]
+  },
+
+  {
+    titulo: "Kung Fu Panda 2",
+    tituloBusca: "Kung Fu Panda 2",
+    saga: "Kung Fu Panda",
+    ordem: 2,
+    ano: 2011,
+    posterUrl: "https://image.tmdb.org/t/p/w500/dSF0v3XPCzKb30zv3fLeuoJuTRv.jpg",
+    data: "2026-11-18",
+    nota: 5,
+    sinopse: "Po, agora o Dragão Guerreiro, e os Cinco Furiosos cruzam a China para deter o lorde Shen, que tem uma arma secreta capaz de acabar com o kung fu.",
+    piadas: [
+      "Shen psicopata afeminado",
+      "Po sofreu mais que o Tai Lung e não é mal",
+      "A cabra vidente avisou tudo e ninguém deu ouvido. Clássico",
+      "Pavão com canhão: o cara trocou o kung fu por pólvora e ainda perdeu",
+      "O Po achando paz interior em dois minutos e muita gente em terapia há dez anos",
+      "O pai ganso do Po nunca achou estranho ter adotado um panda"
+    ]
+  },
+
+  {
+    titulo: "Kung Fu Panda 3",
+    tituloBusca: "Kung Fu Panda 3",
+    saga: "Kung Fu Panda",
+    ordem: 3,
+    ano: 2016,
+    posterUrl: "https://image.tmdb.org/t/p/w500/ztaU1LyB4IpBSvdZ0p1RntQkfhQ.jpg",
+    data: "2026-11-19",
+    nota: 5,
+    sinopse: "Ao visitar uma vila secreta com o pai, Po forma um exército de pandas para combater um espírito maligno que ameaça a China.",
+    piadas: [
+      "Kai um pleno desconhecido",
+      "Kai achando que é o Gengis Khan KKKKKKK",
+      "Dois pais brigando pra ver quem alimenta o Po: o único que sai ganhando é o Po",
+      "Treinamento de panda: come muito e rola morro abaixo",
+      "Kai vive de chi dos outros: vilão que só funciona com bateria emprestada",
+      "A Mei Mei com a fita deixou o Po perdidinho"
+    ]
   }
 
 ];
